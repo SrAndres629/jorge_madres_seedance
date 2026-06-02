@@ -1,0 +1,92 @@
+[
+  {
+    "assetId": 1,
+    "sourcePath": "universo/Board A — Identity Lock.png",
+    "canonicalPath": "01_assets/brand/board_a_identity_lock.png",
+    "exists": true,
+    "fileSize": 1727349,
+    "sha256": "7d738708270c4e5e49789d5b276c0fd36a41f39eebeb01974924835d768cf9e3",
+    "status": "copied"
+  },
+  {
+    "assetId": 2,
+    "sourcePath": "universo/Board B — Performance & Presence Jorge.png",
+    "canonicalPath": "01_assets/brand/board_b_performance_presence.png",
+    "exists": true,
+    "fileSize": 1711952,
+    "sha256": "6afa915cdfe172cff84742b83c20a271c1573ac98a27eed72b834830ea691e36",
+    "status": "copied"
+  },
+  {
+    "assetId": 3,
+    "sourcePath": "universo/Board C — Jorge in World Cinematic Integration Board_final.png",
+    "canonicalPath": "01_assets/brand/board_c_world_integration.png",
+    "exists": true,
+    "fileSize": 2015920,
+    "sha256": "51d20f0fa42a594e95062295a8f23a9e58f12dc46bec5f09071759e8ed594e89",
+    "status": "copied"
+  },
+  {
+    "assetId": 4,
+    "sourcePath": "sceneboard/Scene Board 01 — Hook espejo-caos.png",
+    "canonicalPath": "01_assets/scenes/scene_01_hook_espejo_caos.png",
+    "exists": true,
+    "fileSize": 1961031,
+    "sha256": "993680b451c5612a44a265d55d3f59e3ca5935de7cce2b2dbd351ca453d7190b",
+    "status": "copied"
+  },
+  {
+    "assetId": 5,
+    "sourcePath": "sceneboard/Scene Board 02 — Dolor tiempo.png",
+    "canonicalPath": "01_assets/scenes/scene_02_dolor_tiempo.png",
+    "exists": true,
+    "fileSize": 1949881,
+    "sha256": "59334b4a2cc4a5de23d4f8c7444d8fd371d11d954cecd864dee1efbcd4d0c86a",
+    "status": "copied"
+  },
+  {
+    "assetId": 6,
+    "sourcePath": "sceneboard/Scene Board 03 — Agua_sudor_calor.png",
+    "canonicalPath": "01_assets/scenes/scene_03_agua_sudor_calor.png",
+    "exists": true,
+    "fileSize": 2216309,
+    "sha256": "edbbde7b24329bf480c8b09e0c8b1472347de2ddad255804e2351608dfce7520",
+    "status": "copied"
+  },
+  {
+    "assetId": 7,
+    "sourcePath": "sceneboard/Scene Board 04 — Dolor precisión.png",
+    "canonicalPath": "01_assets/scenes/scene_04_dolor_precision.png",
+    "exists": true,
+    "fileSize": 1875026,
+    "sha256": "93f45624262539813332164922eab90851e33f90c8abb389f865357a23be95ba",
+    "status": "copied"
+  },
+  {
+    "assetId": 8,
+    "sourcePath": "sceneboard/Scene Board 05 — Autoridad Jorge.png",
+    "canonicalPath": "01_assets/scenes/scene_05_autoridad_jorge.png",
+    "exists": true,
+    "fileSize": 1796035,
+    "sha256": "b2f29086bfb58e48435e225dc561dfe5a9e300a3751de894ed441fb60c799ce6",
+    "status": "copied"
+  },
+  {
+    "assetId": 9,
+    "sourcePath": "sceneboard/Scene Board 06 — Solución_transformación.png",
+    "canonicalPath": "01_assets/scenes/scene_06_solucion_transformacion.png",
+    "exists": true,
+    "fileSize": 2072436,
+    "sha256": "d42b78af4c923c901522be0f9419e285cb27b0c51464373833c3fbbd45dccd36",
+    "status": "copied"
+  },
+  {
+    "assetId": 10,
+    "sourcePath": "sceneboard/Scene Board 07 — Oferta + CTA.png",
+    "canonicalPath": "01_assets/scenes/scene_07_cta.png",
+    "exists": true,
+    "fileSize": 1761789,
+    "sha256": "effb687374cb30afd8e5625f73c28f46f0f9d1c621fbe3d1756ea1c84cd4b94b",
+    "status": "copied"
+  }
+]
