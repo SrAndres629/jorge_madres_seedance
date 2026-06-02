@@ -16,6 +16,9 @@ node_modules/
 *.swp
 *.swo
 
+# Secrets
+.env
+
 # Temp
 *.tmp
 *.temp

@@ -500,7 +500,9 @@ for entry in payloads:
     with open(resp_path, "w", encoding="utf-8") as f:
         json.dump({"statusCode": sc, "body": resp}, f, indent=2, ensure_ascii=False)
 
-    task_id = resp.get("data", {}).get("taskId") or resp.get("taskId", "")
+    task_id = ((resp or {}).get("data", {}) or {}).get("taskId") or (resp or {}).get(
+        "taskId", ""
+    )
     created_at = datetime.now(timezone.utc).isoformat()
 
     if sc in (200, 201) and task_id:
