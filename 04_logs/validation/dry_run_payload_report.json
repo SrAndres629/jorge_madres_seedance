@@ -1,0 +1,25 @@
+{
+  "totalPayloads": 7,
+  "validations": {
+    "allGenerateAudioTrue": true,
+    "noReferenceAudioUrls": true,
+    "noFirstFrameUrl": true,
+    "noLastFrameUrl": true,
+    "noGenerateAudioFalse": true,
+    "correctAspectRatio": true,
+    "correctResolution": true,
+    "correctDurations": true,
+    "urlsUseRawGithub": true,
+    "noKieCalled": true
+  },
+  "payloadPaths": [
+    "04_logs/dry_run_payloads/payload_01_hook_00_04.json",
+    "04_logs/dry_run_payloads/payload_02_time_04_08.json",
+    "04_logs/dry_run_payloads/payload_03_water_08_12.json",
+    "04_logs/dry_run_payloads/payload_04_precision_12_16.json",
+    "04_logs/dry_run_payloads/payload_05_solution_16_20.json",
+    "04_logs/dry_run_payloads/payload_06_authority_20_25.json",
+    "04_logs/dry_run_payloads/payload_07_cta_25_30.json"
+  ],
+  "errors": []
+}

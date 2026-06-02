@@ -1,0 +1,17 @@
+{
+  "model": "bytedance/seedance-2-fast",
+  "input": {
+    "prompt": "Subject:\nJorge Aguirre Flores standing centered as the authority figure in a black professional uniform.\n\nAction:\nJorge stands calm and authoritative. Behind him, the three problem worlds freeze as symbolic layers: time and clock, water and heat, vanity mirror and precision.\n\nEnvironment:\nClean cinematic studio-like space with frozen symbolic worlds behind Jorge, controlled contrast, dark warm lighting, clear face.\n\nCamera:\nShot in vertical 9:16 format. Steady frontal slow push-in. Use eye-level or very subtle low-angle authority framing. The visual rhythm should feel calm, stable, powerful. Focus order: first on Jorge's face, then black uniform, then frozen worlds behind him.\n\nStyle:\nCinematic authority reveal, masculine calm presence, professional trust, chaos stopped by experience, not magic.\n\nNative Audio:\nMusic: authority beat drop with controlled tropical percussion and strong brass hit\nSound effects: subtle freeze impact\nVoice type: firm mature off-camera male voice\nVoice line: \"Más de treinta años cuidando tu mirada.\"\nLip sync: none — off-camera voice only\n\nConstraints:\n- Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, fake typography, or fake uniform embroidery.\n- Do not change Jorge's face, age, hairstyle, body type, or uniform.\n- No magic hand gesture, no superhero pose, no raised hands using powers.\n- Avoid distorted hands, extra fingers, cluttered background, cartoon look, and theatrical acting.",
+    "reference_image_urls": [
+      "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+      "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+      "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_c_world_integration.png",
+      "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_05_autoridad_jorge.png"
+    ],
+    "generate_audio": true,
+    "resolution": "720p",
+    "aspect_ratio": "9:16",
+    "duration": 5,
+    "web_search": false
+  }
+}

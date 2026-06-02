@@ -1,0 +1,16 @@
+{
+  "model": "bytedance/seedance-2-fast",
+  "input": {
+    "prompt": "Subject:\nA woman age 35–45 rushing at a vanity while Jorge Aguirre Flores calmly crosses through the center of the scene in a black professional uniform.\n\nAction:\nThe woman tries to finish her eyeliner while checking the time. She is hurried and frustrated but dignified. Jorge walks with calm purpose while the world moves quickly around him.\n\nEnvironment:\nChaotic morning vanity room with a large dominant clock, phone, makeup items, purse, and controlled visual disorder.\n\nCamera:\nShot in vertical 9:16 format. Dynamic lateral movement with a whip-pan feeling as Jorge crosses the frame. Use moderate wide lens with slight parallax. The visual rhythm should feel fast foreground motion while Jorge remains visually stable. Focus order: first on large clock, then rushing woman, then Jorge calm in center.\n\nStyle:\nFast-paced cinematic social-ad energy, humorous but respectful, chaos around the character, not humiliation.\n\nNative Audio:\nMusic: fast tropical cumbia-salsa percussion with güiro, timbales and campana\nSound effects: clock ticking, quick whoosh transitions\nVoice type: off-camera male pregón voice\nVoice line: \"¡Ya no corras, no te atrases!\"\nLip sync: none — off-camera voice only\n\nConstraints:\n- Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.\n- No woman on the floor, no humiliation, no slapstick, no panic caricature.\n- Jorge must not act magical, heroic, theatrical, or exaggerated.\n- Avoid distorted hands, extra fingers, cartoon look, and cluttered unreadable layouts.",
+    "reference_image_urls": [
+      "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+      "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+      "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_02_dolor_tiempo.png"
+    ],
+    "generate_audio": true,
+    "resolution": "720p",
+    "aspect_ratio": "9:16",
+    "duration": 4,
+    "web_search": false
+  }
+}

@@ -1,0 +1,27 @@
+Subject:
+Jorge Aguirre Flores standing calmly and confidently in a clean dark professional beauty-studio environment.
+
+Action:
+Jorge holds a firm trustworthy final presence. The composition leaves large clean negative space for future text overlays such as offer, price, WhatsApp, and brand name, which will be added later in editing.
+
+Environment:
+Clean dark studio with warm highlights, subtle traces of resolved worlds, uncluttered background, professional beauty setting.
+
+Camera:
+Shot in vertical 9:16 format. Stable slow push-in toward Jorge. Use clean portrait framing with strong readable silhouette. The visual rhythm should feel calm final conversion rhythm. Focus order: first on Jorge's face, then clean negative space, then final professional presence.
+
+Style:
+Cinematic final CTA anchor, trustworthy, clear, modern social-ad energy, not salesman-like.
+
+Native Audio:
+Music: final tropical cumbia-salsa climax with güiro, timbales, campana, brass hits and percussion remate
+Sound effects: final impact hit
+Voice type: clear off-camera male CTA voice
+Voice line: "Especial para mamá. Agenda por WhatsApp."
+Lip sync: none — off-camera voice only
+
+Constraints:
+- Do not generate on-screen text, captions, prices, phone numbers, WhatsApp graphics, logos, fake typography, or fake uniform embroidery.
+- Do not change Jorge's face, age, hairstyle, body type, or uniform.
+- No exaggerated salesman gesture, no pointing at camera, no fake smile.
+- Avoid distorted hands, extra fingers, cartoon look, cluttered CTA background, and superhero energy.

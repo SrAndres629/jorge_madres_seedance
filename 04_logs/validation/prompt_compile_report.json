@@ -1,0 +1,15 @@
+{
+  "totalScenes": 7,
+  "compiledPrompts": 7,
+  "missingFields": [],
+  "promptPaths": [
+    "02_prompts/compiled/prompt_01_hook_00_04.txt",
+    "02_prompts/compiled/prompt_02_time_04_08.txt",
+    "02_prompts/compiled/prompt_03_water_08_12.txt",
+    "02_prompts/compiled/prompt_04_precision_12_16.txt",
+    "02_prompts/compiled/prompt_05_solution_16_20.txt",
+    "02_prompts/compiled/prompt_06_authority_20_25.txt",
+    "02_prompts/compiled/prompt_07_cta_25_30.txt"
+  ],
+  "ok": true
+}

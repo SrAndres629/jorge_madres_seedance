@@ -1,0 +1,248 @@
+[
+  {
+    "sceneId": "01_hook_00_04",
+    "duration": 4,
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/scenes/scene_01_hook_espejo_caos.png"
+    ],
+    "subject": "A woman age 35–45 in front of a vanity mirror during a chaotic morning. Jorge Aguirre Flores appears only as a dark partial silhouette inside the mirror reflection, not fully revealed.",
+    "action": "The woman urgently tries to fix her makeup while the mirror slightly multiplies her reflection. She feels rushed and frustrated but remains dignified.",
+    "environment": "Warm dark vanity room, oversized clock, vibrating phone, a few floating makeup items, mirror reflections, morning pressure. Only three chaos symbols: clock, phone, makeup.",
+    "camera": {
+      "format": "Vertical 9:16",
+      "movement": "Start with an aggressive crash zoom into the mirror, then a fast whip-like movement and a sudden visual stop when Jorge's silhouette appears",
+      "lens": "slight lens distortion",
+      "speed": "fast, scroll-stopping, readable",
+      "focus_order": ["mirror chaos", "woman's reflection", "Jorge silhouette"]
+    },
+    "style": "Cinematic viral TikTok/Reels energy, humor-chaos, surreal but understandable, high contrast, warm highlights, fast visual rhythm.",
+    "nativeAudio": {
+      "music": "high-energy tropical cumbia-salsa percussion from the first second: güiro, timbales, campana, short brass hit",
+      "sfx": "clock ticking, mirror whoosh",
+      "voiceType": "off-camera male pregón voice",
+      "voiceLine": "¿Peleando con el espejo?",
+      "lipSync": false
+    },
+    "constraints": [
+      "Do not generate on-screen text, captions, prices, phone numbers, WhatsApp, logos, fake typography, or uniform embroidery.",
+      "Do not reveal Jorge fully.",
+      "Do not humiliate the woman.",
+      "Avoid too many floating objects, too many reflections, grotesque expressions, distorted hands, cartoon look, or superhero energy."
+    ],
+    "outputName": "01_hook_00_04.mp4",
+    "approvalCriteria": ["scroll-stopping first frame", "Jorge only silhouette", "woman dignified", "no text", "mirror chaos readable"]
+  },
+  {
+    "sceneId": "02_time_04_08",
+    "duration": 4,
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/scenes/scene_02_dolor_tiempo.png"
+    ],
+    "subject": "A woman age 35–45 rushing at a vanity while Jorge Aguirre Flores calmly crosses through the center of the scene in a black professional uniform.",
+    "action": "The woman tries to finish her eyeliner while checking the time. She is hurried and frustrated but dignified. Jorge walks with calm purpose while the world moves quickly around him.",
+    "environment": "Chaotic morning vanity room with a large dominant clock, phone, makeup items, purse, and controlled visual disorder.",
+    "camera": {
+      "format": "Vertical 9:16",
+      "movement": "Dynamic lateral movement with a whip-pan feeling as Jorge crosses the frame",
+      "lens": "moderate wide lens with slight parallax",
+      "speed": "fast foreground motion while Jorge remains visually stable",
+      "focus_order": ["large clock", "rushing woman", "Jorge calm in center"]
+    },
+    "style": "Fast-paced cinematic social-ad energy, humorous but respectful, chaos around the character, not humiliation.",
+    "nativeAudio": {
+      "music": "fast tropical cumbia-salsa percussion with güiro, timbales and campana",
+      "sfx": "clock ticking, quick whoosh transitions",
+      "voiceType": "off-camera male pregón voice",
+      "voiceLine": "¡Ya no corras, no te atrases!",
+      "lipSync": false
+    },
+    "constraints": [
+      "Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.",
+      "No woman on the floor, no humiliation, no slapstick, no panic caricature.",
+      "Jorge must not act magical, heroic, theatrical, or exaggerated.",
+      "Avoid distorted hands, extra fingers, cartoon look, and cluttered unreadable layouts."
+    ],
+    "outputName": "02_time_04_08.mp4",
+    "approvalCriteria": ["time problem readable", "woman dignified", "Jorge calm and stable", "no text", "dynamic camera"]
+  },
+  {
+    "sceneId": "03_water_08_12",
+    "duration": 4,
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/scenes/scene_03_agua_sudor_calor.png"
+    ],
+    "subject": "A woman age 35–45 in a tropical humid setting, with Jorge Aguirre Flores calm and steady in the background or crossing through the environment.",
+    "action": "The woman notices that her eyeliner line is dissolving. The disappearing line is shown symbolically through a water drop or reflection, not as a grotesque ruined face.",
+    "environment": "Tropical humidity, rain or poolside atmosphere, water drops, vapor, reflective surfaces, warm wet light.",
+    "camera": {
+      "format": "Vertical 9:16",
+      "movement": "Start with a close-up of a water drop or wet mirror surface, then reveal the woman and push toward the dissolving line",
+      "lens": "macro-like close detail transitioning to medium shot",
+      "speed": "dynamic but readable",
+      "focus_order": ["water drop", "eyeliner line dissolving", "woman's reaction", "Jorge steady presence"]
+    },
+    "style": "Cinematic tropical realism, wet reflections, visually striking but elegant, frustration without tragedy.",
+    "nativeAudio": {
+      "music": "tropical cumbia-salsa rhythm with güiro, campana, congas, short brass accent",
+      "sfx": "splash, water drop, humid atmosphere",
+      "voiceType": "off-camera male pregón voice",
+      "voiceLine": "Agua, sudor y calor… que tu línea no se pase.",
+      "lipSync": false
+    },
+    "constraints": [
+      "Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.",
+      "No destroyed makeup face, no horror look, no ugly crying, no excessive suffering.",
+      "No oversexualized pool imagery.",
+      "Avoid distorted hands, extra fingers, melting faces, and grotesque makeup."
+    ],
+    "outputName": "03_water_08_12.mp4",
+    "approvalCriteria": ["water problem readable", "line dissolves symbolically", "no grotesque makeup", "Jorge stable", "no text"]
+  },
+  {
+    "sceneId": "04_precision_12_16",
+    "duration": 4,
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/scenes/scene_04_dolor_precision.png"
+    ],
+    "subject": "A mature woman age 45–55 at a warm vanity mirror, with Jorge Aguirre Flores softly present in the mirror reflection or background.",
+    "action": "The woman applies eyeliner and the line comes out slightly uneven. She remains elegant, human, and dignified, showing quiet frustration without weakness.",
+    "environment": "Warm intimate vanity mirror, soft bulbs, subtle doubled reflection, calm interior, respectful emotional space.",
+    "camera": {
+      "format": "Vertical 9:16",
+      "movement": "Gentle push-in toward the mirror and hand detail, slower and more intimate than previous clips",
+      "lens": "soft portrait lens with shallow depth",
+      "speed": "controlled, empathetic, slower rhythm",
+      "focus_order": ["hand with eyeliner", "slightly uneven line", "woman's reflection", "Jorge calm presence"]
+    },
+    "style": "Cinematic warm intimacy, respectful, human, emotionally grounded, no comedy in this shot.",
+    "nativeAudio": {
+      "music": "slightly softer tropical groove with warm percussion",
+      "sfx": "subtle mirror ambience",
+      "voiceType": "calm off-camera male pregón voice",
+      "voiceLine": "Si la línea no sale igual, hay una forma más clara.",
+      "lipSync": false
+    },
+    "constraints": [
+      "Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.",
+      "No exaggerated old age, no trembling hands, no incapacity, no cruel tone.",
+      "No grotesque mirror distortion.",
+      "Avoid distorted hands, artificial skin, cartoon look, and sadness that feels humiliating."
+    ],
+    "outputName": "04_precision_12_16.mp4",
+    "approvalCriteria": ["woman dignified", "precision problem readable", "subtle uneven line", "warm tone", "no text"]
+  },
+  {
+    "sceneId": "05_solution_16_20",
+    "duration": 4,
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/scenes/scene_06_solucion_transformacion.png"
+    ],
+    "subject": "The women from the problem scenes now appear calm, confident, and ready, with Jorge Aguirre Flores as the stable professional connector.",
+    "action": "The chaos shifts into confidence. Show practical beauty benefits: eyes ready, lips with natural color, brows and mirada clean and natural.",
+    "environment": "Brighter, cleaner, positive beauty environment with traces of the previous worlds becoming orderly and calm.",
+    "camera": {
+      "format": "Vertical 9:16",
+      "movement": "Smooth push-ins and clean transitions from chaos to clarity",
+      "lens": "clean cinematic portrait framing",
+      "speed": "energetic but more controlled than the first half",
+      "focus_order": ["eyes ready", "lips with color", "brows and mirada", "Jorge as connector"]
+    },
+    "style": "Cinematic transformation, natural confidence, practical beauty, positive and clear without excessive glamour.",
+    "nativeAudio": {
+      "music": "tropical cumbia-salsa music rising positively with güiro, timbales and brass accent",
+      "sfx": "bright transition hit",
+      "voiceType": "off-camera male or mixed pregón voice",
+      "voiceLine": "Diseño definitivo: ojos, labios y mirada.",
+      "lipSync": false
+    },
+    "constraints": [
+      "Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.",
+      "No fake before-after look, no exaggerated beauty transformation, no model-perfect artificial skin.",
+      "No excessive glamour, no plastic face.",
+      "Avoid distorted hands, cartoon look, and unrealistic beauty claims."
+    ],
+    "outputName": "05_solution_16_20.mp4",
+    "approvalCriteria": ["solution readable", "natural beauty", "calmer tone", "Jorge present", "no text"]
+  },
+  {
+    "sceneId": "06_authority_20_25",
+    "duration": 5,
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/brand/board_c_world_integration.png",
+      "01_assets/scenes/scene_05_autoridad_jorge.png"
+    ],
+    "subject": "Jorge Aguirre Flores standing centered as the authority figure in a black professional uniform.",
+    "action": "Jorge stands calm and authoritative. Behind him, the three problem worlds freeze as symbolic layers: time and clock, water and heat, vanity mirror and precision.",
+    "environment": "Clean cinematic studio-like space with frozen symbolic worlds behind Jorge, controlled contrast, dark warm lighting, clear face.",
+    "camera": {
+      "format": "Vertical 9:16",
+      "movement": "Steady frontal slow push-in",
+      "lens": "eye-level or very subtle low-angle authority framing",
+      "speed": "calm, stable, powerful",
+      "focus_order": ["Jorge's face", "black uniform", "frozen worlds behind him"]
+    },
+    "style": "Cinematic authority reveal, masculine calm presence, professional trust, chaos stopped by experience, not magic.",
+    "nativeAudio": {
+      "music": "authority beat drop with controlled tropical percussion and strong brass hit",
+      "sfx": "subtle freeze impact",
+      "voiceType": "firm mature off-camera male voice",
+      "voiceLine": "Más de treinta años cuidando tu mirada.",
+      "lipSync": false
+    },
+    "constraints": [
+      "Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, fake typography, or fake uniform embroidery.",
+      "Do not change Jorge's face, age, hairstyle, body type, or uniform.",
+      "No magic hand gesture, no superhero pose, no raised hands using powers.",
+      "Avoid distorted hands, extra fingers, cluttered background, cartoon look, and theatrical acting."
+    ],
+    "outputName": "06_authority_20_25.mp4",
+    "approvalCriteria": ["Jorge identity strong", "authority clear", "face readable", "no magic hands", "no text"]
+  },
+  {
+    "sceneId": "07_cta_25_30",
+    "duration": 5,
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/scenes/scene_07_cta.png"
+    ],
+    "subject": "Jorge Aguirre Flores standing calmly and confidently in a clean dark professional beauty-studio environment.",
+    "action": "Jorge holds a firm trustworthy final presence. The composition leaves large clean negative space for future text overlays such as offer, price, WhatsApp, and brand name, which will be added later in editing.",
+    "environment": "Clean dark studio with warm highlights, subtle traces of resolved worlds, uncluttered background, professional beauty setting.",
+    "camera": {
+      "format": "Vertical 9:16",
+      "movement": "Stable slow push-in toward Jorge",
+      "lens": "clean portrait framing with strong readable silhouette",
+      "speed": "calm final conversion rhythm",
+      "focus_order": ["Jorge's face", "clean negative space", "final professional presence"]
+    },
+    "style": "Cinematic final CTA anchor, trustworthy, clear, modern social-ad energy, not salesman-like.",
+    "nativeAudio": {
+      "music": "final tropical cumbia-salsa climax with güiro, timbales, campana, brass hits and percussion remate",
+      "sfx": "final impact hit",
+      "voiceType": "clear off-camera male CTA voice",
+      "voiceLine": "Especial para mamá. Agenda por WhatsApp.",
+      "lipSync": false
+    },
+    "constraints": [
+      "Do not generate on-screen text, captions, prices, phone numbers, WhatsApp graphics, logos, fake typography, or fake uniform embroidery.",
+      "Do not change Jorge's face, age, hairstyle, body type, or uniform.",
+      "No exaggerated salesman gesture, no pointing at camera, no fake smile.",
+      "Avoid distorted hands, extra fingers, cartoon look, cluttered CTA background, and superhero energy."
+    ],
+    "outputName": "07_cta_25_30.mp4",
+    "approvalCriteria": ["Jorge identity consistent", "clean negative space", "CTA frame usable", "no generated text", "professional trust"]
+  }
+]

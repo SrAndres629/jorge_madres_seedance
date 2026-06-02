@@ -1,0 +1,27 @@
+Subject:
+A woman age 35–45 in front of a vanity mirror during a chaotic morning. Jorge Aguirre Flores appears only as a dark partial silhouette inside the mirror reflection, not fully revealed.
+
+Action:
+The woman urgently tries to fix her makeup while the mirror slightly multiplies her reflection. She feels rushed and frustrated but remains dignified.
+
+Environment:
+Warm dark vanity room, oversized clock, vibrating phone, a few floating makeup items, mirror reflections, morning pressure. Only three chaos symbols: clock, phone, makeup.
+
+Camera:
+Shot in vertical 9:16 format. Start with an aggressive crash zoom into the mirror, then a fast whip-like movement and a sudden visual stop when Jorge's silhouette appears. Use slight lens distortion. The visual rhythm should feel fast, scroll-stopping, readable. Focus order: first on mirror chaos, then woman's reflection, then Jorge silhouette.
+
+Style:
+Cinematic viral TikTok/Reels energy, humor-chaos, surreal but understandable, high contrast, warm highlights, fast visual rhythm.
+
+Native Audio:
+Music: high-energy tropical cumbia-salsa percussion from the first second: güiro, timbales, campana, short brass hit
+Sound effects: clock ticking, mirror whoosh
+Voice type: off-camera male pregón voice
+Voice line: "¿Peleando con el espejo?"
+Lip sync: none — off-camera voice only
+
+Constraints:
+- Do not generate on-screen text, captions, prices, phone numbers, WhatsApp, logos, fake typography, or uniform embroidery.
+- Do not reveal Jorge fully.
+- Do not humiliate the woman.
+- Avoid too many floating objects, too many reflections, grotesque expressions, distorted hands, cartoon look, or superhero energy.

@@ -1,0 +1,16 @@
+{
+  "model": "bytedance/seedance-2-fast",
+  "input": {
+    "prompt": "Subject:\nThe women from the problem scenes now appear calm, confident, and ready, with Jorge Aguirre Flores as the stable professional connector.\n\nAction:\nThe chaos shifts into confidence. Show practical beauty benefits: eyes ready, lips with natural color, brows and mirada clean and natural.\n\nEnvironment:\nBrighter, cleaner, positive beauty environment with traces of the previous worlds becoming orderly and calm.\n\nCamera:\nShot in vertical 9:16 format. Smooth push-ins and clean transitions from chaos to clarity. Use clean cinematic portrait framing. The visual rhythm should feel energetic but more controlled than the first half. Focus order: first on eyes ready, then lips with color, then brows and mirada, then Jorge as connector.\n\nStyle:\nCinematic transformation, natural confidence, practical beauty, positive and clear without excessive glamour.\n\nNative Audio:\nMusic: tropical cumbia-salsa music rising positively with güiro, timbales and brass accent\nSound effects: bright transition hit\nVoice type: off-camera male or mixed pregón voice\nVoice line: \"Diseño definitivo: ojos, labios y mirada.\"\nLip sync: none — off-camera voice only\n\nConstraints:\n- Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.\n- No fake before-after look, no exaggerated beauty transformation, no model-perfect artificial skin.\n- No excessive glamour, no plastic face.\n- Avoid distorted hands, cartoon look, and unrealistic beauty claims.",
+    "reference_image_urls": [
+      "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+      "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+      "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_06_solucion_transformacion.png"
+    ],
+    "generate_audio": true,
+    "resolution": "720p",
+    "aspect_ratio": "9:16",
+    "duration": 4,
+    "web_search": false
+  }
+}

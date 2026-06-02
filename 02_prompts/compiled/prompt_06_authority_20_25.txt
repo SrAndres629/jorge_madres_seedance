@@ -1,0 +1,27 @@
+Subject:
+Jorge Aguirre Flores standing centered as the authority figure in a black professional uniform.
+
+Action:
+Jorge stands calm and authoritative. Behind him, the three problem worlds freeze as symbolic layers: time and clock, water and heat, vanity mirror and precision.
+
+Environment:
+Clean cinematic studio-like space with frozen symbolic worlds behind Jorge, controlled contrast, dark warm lighting, clear face.
+
+Camera:
+Shot in vertical 9:16 format. Steady frontal slow push-in. Use eye-level or very subtle low-angle authority framing. The visual rhythm should feel calm, stable, powerful. Focus order: first on Jorge's face, then black uniform, then frozen worlds behind him.
+
+Style:
+Cinematic authority reveal, masculine calm presence, professional trust, chaos stopped by experience, not magic.
+
+Native Audio:
+Music: authority beat drop with controlled tropical percussion and strong brass hit
+Sound effects: subtle freeze impact
+Voice type: firm mature off-camera male voice
+Voice line: "Más de treinta años cuidando tu mirada."
+Lip sync: none — off-camera voice only
+
+Constraints:
+- Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, fake typography, or fake uniform embroidery.
+- Do not change Jorge's face, age, hairstyle, body type, or uniform.
+- No magic hand gesture, no superhero pose, no raised hands using powers.
+- Avoid distorted hands, extra fingers, cluttered background, cartoon look, and theatrical acting.
