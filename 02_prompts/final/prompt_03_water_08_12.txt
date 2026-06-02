@@ -1,0 +1,23 @@
+Subject:
+A woman age 35–45 in a tropical humid setting, with Jorge Aguirre Flores calm and steady in the background or crossing through the environment.
+
+Action:
+The woman notices that her eyeliner line is dissolving. The disappearing line is shown symbolically through a water drop or reflection, not as a grotesque ruined face.
+
+Environment:
+Tropical humidity, rain or poolside atmosphere, water drops, vapor, reflective surfaces, warm wet light.
+
+Camera:
+Shot in vertical 9:16 format. Start with a close-up of a water drop or wet mirror surface, then reveal the woman and push toward the dissolving line. Use macro-like close detail transitioning to medium shot. The visual rhythm should feel dynamic but readable. Focus order: first on water drop, then eyeliner line dissolving, then woman's reaction, then Jorge steady presence.
+
+Style:
+Cinematic tropical realism, wet reflections, visually striking but elegant, frustration without tragedy.
+
+Native Audio:
+Generate native synchronized audio with tropical cumbia-salsa rhythm with güiro, campana, congas, short brass accent from the first second. Add sound effects: splash, water drop, humid atmosphere. Use an off-camera male pregón voice saying only: "Agua, sudor y calor… que tu línea no se pase.". The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
+
+Constraints:
+- Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.
+- No destroyed makeup face, no horror look, no ugly crying, no excessive suffering.
+- No oversexualized pool imagery.
+- Avoid distorted hands, extra fingers, melting faces, and grotesque makeup.

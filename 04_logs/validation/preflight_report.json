@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-02T15:12:11.375182Z",
+  "timestamp": "2026-06-02T15:19:03.517635+00:00",
   "dryRun": true,
   "kieCalled": false,
   "configLoaded": true,
@@ -13,24 +13,149 @@
   "promptValidation": {
     "total": 7,
     "found": 7,
-    "empty": [
-      "02_prompts/final/prompt_01_hook_00_04.txt",
-      "02_prompts/final/prompt_02_time_04_08.txt",
-      "02_prompts/final/prompt_03_water_08_12.txt",
-      "02_prompts/final/prompt_04_precision_12_16.txt",
-      "02_prompts/final/prompt_05_solution_16_20.txt",
-      "02_prompts/final/prompt_06_authority_20_25.txt",
-      "02_prompts/final/prompt_07_cta_25_30.txt"
-    ],
+    "empty": [],
     "missing": [],
-    "ok": false
+    "ok": true
   },
   "urlValidation": {
-    "total": 0,
-    "ok_count": 0,
+    "total": 22,
+    "ok_count": 22,
     "fail_count": 0,
-    "results": [],
-    "allOk": false
+    "results": [
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "01_hook_00_04"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "01_hook_00_04"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_01_hook_espejo_caos.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "01_hook_00_04"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "02_time_04_08"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "02_time_04_08"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_02_dolor_tiempo.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "02_time_04_08"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "03_water_08_12"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "03_water_08_12"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_03_agua_sudor_calor.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "03_water_08_12"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "04_precision_12_16"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "04_precision_12_16"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_04_dolor_precision.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "04_precision_12_16"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "05_solution_16_20"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "05_solution_16_20"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_06_solucion_transformacion.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "05_solution_16_20"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "06_authority_20_25"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "06_authority_20_25"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_c_world_integration.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "06_authority_20_25"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_05_autoridad_jorge.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "06_authority_20_25"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "07_cta_25_30"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "07_cta_25_30"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_07_cta.png",
+        "statusCode": 200,
+        "ok": true,
+        "sceneId": "07_cta_25_30"
+      }
+    ],
+    "allOk": true
   },
   "payloadValidation": {
     "totalPayloads": 0,
@@ -43,7 +168,15 @@
     "noLastFrameUrl": true,
     "errors": []
   },
-  "payloadsGenerated": 0,
-  "payloadPaths": [],
-  "overallOk": false
+  "payloadsGenerated": 7,
+  "payloadPaths": [
+    "04_logs/dry_run_payloads/payload_01_hook_00_04.json",
+    "04_logs/dry_run_payloads/payload_02_time_04_08.json",
+    "04_logs/dry_run_payloads/payload_03_water_08_12.json",
+    "04_logs/dry_run_payloads/payload_04_precision_12_16.json",
+    "04_logs/dry_run_payloads/payload_05_solution_16_20.json",
+    "04_logs/dry_run_payloads/payload_06_authority_20_25.json",
+    "04_logs/dry_run_payloads/payload_07_cta_25_30.json"
+  ],
+  "overallOk": true
 }
