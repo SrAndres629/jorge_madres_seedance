@@ -1,0 +1,337 @@
+{
+  "timestamp": "2026-06-02T15:28:00.670804+00:00",
+  "totalScenes": 7,
+  "scenes": [
+    {
+      "sceneId": "01_hook_00_04",
+      "promptFile": "02_prompts/final/prompt_01_hook_00_04.txt",
+      "payloadFile": "04_logs/dry_run_payloads/payload_01_hook_00_04.json",
+      "expectedReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/scenes/scene_01_hook_espejo_caos.png"
+      ],
+      "actualReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/scenes/scene_01_hook_espejo_caos.png"
+      ],
+      "referencesMatch": true,
+      "promptMatchesFile": true,
+      "durationOk": true,
+      "generateAudioOk": true,
+      "aspectRatioOk": true,
+      "resolutionOk": true,
+      "noReferenceAudioUrls": true,
+      "noFirstFrameUrl": true,
+      "noLastFrameUrl": true,
+      "noGeneratedTextInPrompt": true,
+      "urlChecks": [
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_01_hook_espejo_caos.png",
+          "statusCode": 200,
+          "ok": true
+        }
+      ],
+      "allUrlsOk": true,
+      "overallOk": true,
+      "errors": []
+    },
+    {
+      "sceneId": "02_time_04_08",
+      "promptFile": "02_prompts/final/prompt_02_time_04_08.txt",
+      "payloadFile": "04_logs/dry_run_payloads/payload_02_time_04_08.json",
+      "expectedReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/scenes/scene_02_dolor_tiempo.png"
+      ],
+      "actualReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/scenes/scene_02_dolor_tiempo.png"
+      ],
+      "referencesMatch": true,
+      "promptMatchesFile": true,
+      "durationOk": true,
+      "generateAudioOk": true,
+      "aspectRatioOk": true,
+      "resolutionOk": true,
+      "noReferenceAudioUrls": true,
+      "noFirstFrameUrl": true,
+      "noLastFrameUrl": true,
+      "noGeneratedTextInPrompt": true,
+      "urlChecks": [
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_02_dolor_tiempo.png",
+          "statusCode": 200,
+          "ok": true
+        }
+      ],
+      "allUrlsOk": true,
+      "overallOk": true,
+      "errors": []
+    },
+    {
+      "sceneId": "03_water_08_12",
+      "promptFile": "02_prompts/final/prompt_03_water_08_12.txt",
+      "payloadFile": "04_logs/dry_run_payloads/payload_03_water_08_12.json",
+      "expectedReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/scenes/scene_03_agua_sudor_calor.png"
+      ],
+      "actualReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/scenes/scene_03_agua_sudor_calor.png"
+      ],
+      "referencesMatch": true,
+      "promptMatchesFile": true,
+      "durationOk": true,
+      "generateAudioOk": true,
+      "aspectRatioOk": true,
+      "resolutionOk": true,
+      "noReferenceAudioUrls": true,
+      "noFirstFrameUrl": true,
+      "noLastFrameUrl": true,
+      "noGeneratedTextInPrompt": true,
+      "urlChecks": [
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_03_agua_sudor_calor.png",
+          "statusCode": 200,
+          "ok": true
+        }
+      ],
+      "allUrlsOk": true,
+      "overallOk": true,
+      "errors": []
+    },
+    {
+      "sceneId": "04_precision_12_16",
+      "promptFile": "02_prompts/final/prompt_04_precision_12_16.txt",
+      "payloadFile": "04_logs/dry_run_payloads/payload_04_precision_12_16.json",
+      "expectedReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/scenes/scene_04_dolor_precision.png"
+      ],
+      "actualReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/scenes/scene_04_dolor_precision.png"
+      ],
+      "referencesMatch": true,
+      "promptMatchesFile": true,
+      "durationOk": true,
+      "generateAudioOk": true,
+      "aspectRatioOk": true,
+      "resolutionOk": true,
+      "noReferenceAudioUrls": true,
+      "noFirstFrameUrl": true,
+      "noLastFrameUrl": true,
+      "noGeneratedTextInPrompt": true,
+      "urlChecks": [
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_04_dolor_precision.png",
+          "statusCode": 200,
+          "ok": true
+        }
+      ],
+      "allUrlsOk": true,
+      "overallOk": true,
+      "errors": []
+    },
+    {
+      "sceneId": "05_solution_16_20",
+      "promptFile": "02_prompts/final/prompt_05_solution_16_20.txt",
+      "payloadFile": "04_logs/dry_run_payloads/payload_05_solution_16_20.json",
+      "expectedReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/scenes/scene_06_solucion_transformacion.png"
+      ],
+      "actualReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/scenes/scene_06_solucion_transformacion.png"
+      ],
+      "referencesMatch": true,
+      "promptMatchesFile": true,
+      "durationOk": true,
+      "generateAudioOk": true,
+      "aspectRatioOk": true,
+      "resolutionOk": true,
+      "noReferenceAudioUrls": true,
+      "noFirstFrameUrl": true,
+      "noLastFrameUrl": true,
+      "noGeneratedTextInPrompt": true,
+      "urlChecks": [
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_06_solucion_transformacion.png",
+          "statusCode": 200,
+          "ok": true
+        }
+      ],
+      "allUrlsOk": true,
+      "overallOk": true,
+      "errors": []
+    },
+    {
+      "sceneId": "06_authority_20_25",
+      "promptFile": "02_prompts/final/prompt_06_authority_20_25.txt",
+      "payloadFile": "04_logs/dry_run_payloads/payload_06_authority_20_25.json",
+      "expectedReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/brand/board_c_world_integration.png",
+        "01_assets/scenes/scene_05_autoridad_jorge.png"
+      ],
+      "actualReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/brand/board_c_world_integration.png",
+        "01_assets/scenes/scene_05_autoridad_jorge.png"
+      ],
+      "referencesMatch": true,
+      "promptMatchesFile": true,
+      "durationOk": true,
+      "generateAudioOk": true,
+      "aspectRatioOk": true,
+      "resolutionOk": true,
+      "noReferenceAudioUrls": true,
+      "noFirstFrameUrl": true,
+      "noLastFrameUrl": true,
+      "noGeneratedTextInPrompt": true,
+      "urlChecks": [
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_c_world_integration.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_05_autoridad_jorge.png",
+          "statusCode": 200,
+          "ok": true
+        }
+      ],
+      "allUrlsOk": true,
+      "overallOk": true,
+      "errors": []
+    },
+    {
+      "sceneId": "07_cta_25_30",
+      "promptFile": "02_prompts/final/prompt_07_cta_25_30.txt",
+      "payloadFile": "04_logs/dry_run_payloads/payload_07_cta_25_30.json",
+      "expectedReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/scenes/scene_07_cta.png"
+      ],
+      "actualReferences": [
+        "01_assets/brand/board_a_identity_lock.png",
+        "01_assets/brand/board_b_performance_presence.png",
+        "01_assets/scenes/scene_07_cta.png"
+      ],
+      "referencesMatch": true,
+      "promptMatchesFile": true,
+      "durationOk": true,
+      "generateAudioOk": true,
+      "aspectRatioOk": true,
+      "resolutionOk": true,
+      "noReferenceAudioUrls": true,
+      "noFirstFrameUrl": true,
+      "noLastFrameUrl": true,
+      "noGeneratedTextInPrompt": true,
+      "urlChecks": [
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png",
+          "statusCode": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_07_cta.png",
+          "statusCode": 200,
+          "ok": true
+        }
+      ],
+      "allUrlsOk": true,
+      "overallOk": true,
+      "errors": []
+    }
+  ],
+  "overallOk": true,
+  "summary": {
+    "allPromptsMatch": true,
+    "allReferencesMatch": true,
+    "allDurationsOk": true,
+    "allGenerateAudioOk": true,
+    "allUrlsHttp200": true,
+    "noForbiddenFields": true
+  }
+}
