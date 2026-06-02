@@ -1,0 +1,21 @@
+# Git
+.git/
+*.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# n8n
+node_modules/
+.n8n/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temp
+*.tmp
+*.temp

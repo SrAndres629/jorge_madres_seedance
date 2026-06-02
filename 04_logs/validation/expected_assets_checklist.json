@@ -1,0 +1,92 @@
+[
+  {
+    "expectedAssetId": "brand_001",
+    "canonicalFileName": "board_a_identity_lock.png",
+    "expectedFolder": "01_assets/brand/",
+    "status": "possible_match",
+    "candidateFiles": [
+      "universo/Board A — Identity Lock.png"
+    ]
+  },
+  {
+    "expectedAssetId": "brand_002",
+    "canonicalFileName": "board_b_performance_presence.png",
+    "expectedFolder": "01_assets/brand/",
+    "status": "possible_match",
+    "candidateFiles": [
+      "universo/Board B — Performance & Presence Jorge.png"
+    ]
+  },
+  {
+    "expectedAssetId": "brand_003",
+    "canonicalFileName": "board_c_world_integration.png",
+    "expectedFolder": "01_assets/brand/",
+    "status": "possible_match",
+    "candidateFiles": [
+      "universo/Board C — Jorge in World Cinematic Integration Board_final.png"
+    ]
+  },
+  {
+    "expectedAssetId": "scene_001",
+    "canonicalFileName": "scene_01_hook_espejo_caos.png",
+    "expectedFolder": "01_assets/scenes/",
+    "status": "possible_match",
+    "candidateFiles": [
+      "sceneboard/Scene Board 01 — Hook espejo-caos.png"
+    ]
+  },
+  {
+    "expectedAssetId": "scene_002",
+    "canonicalFileName": "scene_02_dolor_tiempo.png",
+    "expectedFolder": "01_assets/scenes/",
+    "status": "possible_match",
+    "candidateFiles": [
+      "sceneboard/Scene Board 02 — Dolor tiempo.png"
+    ]
+  },
+  {
+    "expectedAssetId": "scene_003",
+    "canonicalFileName": "scene_03_agua_sudor_calor.png",
+    "expectedFolder": "01_assets/scenes/",
+    "status": "possible_match",
+    "candidateFiles": [
+      "sceneboard/Scene Board 03 — Agua_sudor_calor.png"
+    ]
+  },
+  {
+    "expectedAssetId": "scene_004",
+    "canonicalFileName": "scene_04_dolor_precision.png",
+    "expectedFolder": "01_assets/scenes/",
+    "status": "possible_match",
+    "candidateFiles": [
+      "sceneboard/Scene Board 04 — Dolor precisión.png"
+    ]
+  },
+  {
+    "expectedAssetId": "scene_005",
+    "canonicalFileName": "scene_05_autoridad_jorge.png",
+    "expectedFolder": "01_assets/scenes/",
+    "status": "possible_match",
+    "candidateFiles": [
+      "sceneboard/Scene Board 05 — Autoridad Jorge.png"
+    ]
+  },
+  {
+    "expectedAssetId": "scene_006",
+    "canonicalFileName": "scene_06_solucion_transformacion.png",
+    "expectedFolder": "01_assets/scenes/",
+    "status": "possible_match",
+    "candidateFiles": [
+      "sceneboard/Scene Board 06 — Solución_transformación.png"
+    ]
+  },
+  {
+    "expectedAssetId": "scene_007",
+    "canonicalFileName": "scene_07_cta.png",
+    "expectedFolder": "01_assets/scenes/",
+    "status": "possible_match",
+    "candidateFiles": [
+      "sceneboard/Scene Board 07 — Oferta + CTA.png"
+    ]
+  }
+]
