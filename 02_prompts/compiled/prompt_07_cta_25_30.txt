@@ -14,11 +14,7 @@ Style:
 Cinematic final CTA anchor, trustworthy, clear, modern social-ad energy, not salesman-like.
 
 Native Audio:
-Music: final tropical cumbia-salsa climax with güiro, timbales, campana, brass hits and percussion remate
-Sound effects: final impact hit
-Voice type: clear off-camera male CTA voice
-Voice line: "Especial para mamá. Agenda por WhatsApp."
-Lip sync: none — off-camera voice only
+Generate native synchronized audio with final tropical cumbia-salsa climax with güiro, timbales, campana, brass hits and percussion remate from the first second. Add sound effects: final impact hit. Use an clear off-camera male CTA voice saying only: "Especial para mamá. Agenda por WhatsApp.". The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
 
 Constraints:
 - Do not generate on-screen text, captions, prices, phone numbers, WhatsApp graphics, logos, fake typography, or fake uniform embroidery.

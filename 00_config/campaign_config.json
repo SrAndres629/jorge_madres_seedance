@@ -1,14 +1,12 @@
 {
   "campaignId": "jorge_madres_seedance_v1",
-  "runMode": "final_7_multishot_native_audio",
   "dryRun": true,
-  "maxTasksPerRun": 7,
-  "autoRetry": false,
-  "generateAudio": true,
-  "defaultModel": "bytedance/seedance-2-fast",
-  "defaultResolution": "720p",
+  "model": "bytedance/seedance-2-fast",
+  "resolution": "720p",
   "aspectRatio": "9:16",
-  "pollIntervalSeconds": 30,
-  "maxPollRounds": 40,
-  "publicAssetBaseUrl": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/"
+  "generateAudio": true,
+  "webSearch": false,
+  "publicAssetBaseUrl": "https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/",
+  "maxTasks": 7,
+  "autoRetry": false
 }

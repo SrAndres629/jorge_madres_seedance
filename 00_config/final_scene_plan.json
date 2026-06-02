@@ -1,0 +1,80 @@
+[
+  {
+    "sceneId": "01_hook_00_04",
+    "duration": 4,
+    "promptFile": "02_prompts/final/prompt_01_hook_00_04.txt",
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/scenes/scene_01_hook_espejo_caos.png"
+    ],
+    "outputName": "01_hook_00_04.mp4"
+  },
+  {
+    "sceneId": "02_time_04_08",
+    "duration": 4,
+    "promptFile": "02_prompts/final/prompt_02_time_04_08.txt",
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/scenes/scene_02_dolor_tiempo.png"
+    ],
+    "outputName": "02_time_04_08.mp4"
+  },
+  {
+    "sceneId": "03_water_08_12",
+    "duration": 4,
+    "promptFile": "02_prompts/final/prompt_03_water_08_12.txt",
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/scenes/scene_03_agua_sudor_calor.png"
+    ],
+    "outputName": "03_water_08_12.mp4"
+  },
+  {
+    "sceneId": "04_precision_12_16",
+    "duration": 4,
+    "promptFile": "02_prompts/final/prompt_04_precision_12_16.txt",
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/scenes/scene_04_dolor_precision.png"
+    ],
+    "outputName": "04_precision_12_16.mp4"
+  },
+  {
+    "sceneId": "05_solution_16_20",
+    "duration": 4,
+    "promptFile": "02_prompts/final/prompt_05_solution_16_20.txt",
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/scenes/scene_06_solucion_transformacion.png"
+    ],
+    "outputName": "05_solution_16_20.mp4"
+  },
+  {
+    "sceneId": "06_authority_20_25",
+    "duration": 5,
+    "promptFile": "02_prompts/final/prompt_06_authority_20_25.txt",
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/brand/board_c_world_integration.png",
+      "01_assets/scenes/scene_05_autoridad_jorge.png"
+    ],
+    "outputName": "06_authority_20_25.mp4"
+  },
+  {
+    "sceneId": "07_cta_25_30",
+    "duration": 5,
+    "promptFile": "02_prompts/final/prompt_07_cta_25_30.txt",
+    "references": [
+      "01_assets/brand/board_a_identity_lock.png",
+      "01_assets/brand/board_b_performance_presence.png",
+      "01_assets/scenes/scene_07_cta.png"
+    ],
+    "outputName": "07_cta_25_30.mp4"
+  }
+]

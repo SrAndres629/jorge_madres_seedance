@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-06-02T15:12:11.375182Z",
+  "dryRun": true,
+  "kieCalled": false,
+  "configLoaded": true,
+  "scenePlanLoaded": true,
+  "assetValidation": {
+    "total": 10,
+    "found": 10,
+    "missing": [],
+    "ok": true
+  },
+  "promptValidation": {
+    "total": 7,
+    "found": 7,
+    "empty": [
+      "02_prompts/final/prompt_01_hook_00_04.txt",
+      "02_prompts/final/prompt_02_time_04_08.txt",
+      "02_prompts/final/prompt_03_water_08_12.txt",
+      "02_prompts/final/prompt_04_precision_12_16.txt",
+      "02_prompts/final/prompt_05_solution_16_20.txt",
+      "02_prompts/final/prompt_06_authority_20_25.txt",
+      "02_prompts/final/prompt_07_cta_25_30.txt"
+    ],
+    "missing": [],
+    "ok": false
+  },
+  "urlValidation": {
+    "total": 0,
+    "ok_count": 0,
+    "fail_count": 0,
+    "results": [],
+    "allOk": false
+  },
+  "payloadValidation": {
+    "totalPayloads": 0,
+    "allGenerateAudioTrue": true,
+    "correctAspectRatio": true,
+    "correctResolution": true,
+    "correctDurations": true,
+    "noReferenceAudioUrls": true,
+    "noFirstFrameUrl": true,
+    "noLastFrameUrl": true,
+    "errors": []
+  },
+  "payloadsGenerated": 0,
+  "payloadPaths": [],
+  "overallOk": false
+}

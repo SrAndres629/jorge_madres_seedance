@@ -1,0 +1,14 @@
+{
+  "campaignConfig": {
+    "parsed": true,
+    "error": null
+  },
+  "sceneSpecs": {
+    "parsed": true,
+    "error": null,
+    "isArray": true,
+    "length": 7,
+    "expectedLength": 7
+  },
+  "overall": true
+}

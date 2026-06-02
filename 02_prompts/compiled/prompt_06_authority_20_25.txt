@@ -14,11 +14,7 @@ Style:
 Cinematic authority reveal, masculine calm presence, professional trust, chaos stopped by experience, not magic.
 
 Native Audio:
-Music: authority beat drop with controlled tropical percussion and strong brass hit
-Sound effects: subtle freeze impact
-Voice type: firm mature off-camera male voice
-Voice line: "Más de treinta años cuidando tu mirada."
-Lip sync: none — off-camera voice only
+Generate native synchronized audio with authority beat drop with controlled tropical percussion and strong brass hit from the first second. Add sound effects: subtle freeze impact. Use an firm mature off-camera male voice saying only: "Más de treinta años cuidando tu mirada.". The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
 
 Constraints:
 - Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, fake typography, or fake uniform embroidery.

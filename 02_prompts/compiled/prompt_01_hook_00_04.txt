@@ -14,11 +14,7 @@ Style:
 Cinematic viral TikTok/Reels energy, humor-chaos, surreal but understandable, high contrast, warm highlights, fast visual rhythm.
 
 Native Audio:
-Music: high-energy tropical cumbia-salsa percussion from the first second: güiro, timbales, campana, short brass hit
-Sound effects: clock ticking, mirror whoosh
-Voice type: off-camera male pregón voice
-Voice line: "¿Peleando con el espejo?"
-Lip sync: none — off-camera voice only
+Generate native synchronized audio with high-energy tropical cumbia-salsa percussion from the first second: güiro, timbales, campana, short brass hit. Add sound effects: clock ticking, mirror whoosh. Use an off-camera male pregón voice saying only: "¿Peleando con el espejo?". The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
 
 Constraints:
 - Do not generate on-screen text, captions, prices, phone numbers, WhatsApp, logos, fake typography, or uniform embroidery.

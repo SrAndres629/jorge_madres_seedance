@@ -14,11 +14,7 @@ Style:
 Fast-paced cinematic social-ad energy, humorous but respectful, chaos around the character, not humiliation.
 
 Native Audio:
-Music: fast tropical cumbia-salsa percussion with güiro, timbales and campana
-Sound effects: clock ticking, quick whoosh transitions
-Voice type: off-camera male pregón voice
-Voice line: "¡Ya no corras, no te atrases!"
-Lip sync: none — off-camera voice only
+Generate native synchronized audio with fast tropical cumbia-salsa percussion with güiro, timbales and campana from the first second. Add sound effects: clock ticking, quick whoosh transitions. Use an off-camera male pregón voice saying only: "¡Ya no corras, no te atrases!". The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
 
 Constraints:
 - Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.

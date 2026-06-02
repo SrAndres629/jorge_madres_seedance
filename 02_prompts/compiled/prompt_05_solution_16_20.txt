@@ -14,11 +14,7 @@ Style:
 Cinematic transformation, natural confidence, practical beauty, positive and clear without excessive glamour.
 
 Native Audio:
-Music: tropical cumbia-salsa music rising positively with güiro, timbales and brass accent
-Sound effects: bright transition hit
-Voice type: off-camera male or mixed pregón voice
-Voice line: "Diseño definitivo: ojos, labios y mirada."
-Lip sync: none — off-camera voice only
+Generate native synchronized audio with tropical cumbia-salsa music rising positively with güiro, timbales and brass accent from the first second. Add sound effects: bright transition hit. Use an off-camera male or mixed pregón voice saying only: "Diseño definitivo: ojos, labios y mirada.". The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
 
 Constraints:
 - Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.

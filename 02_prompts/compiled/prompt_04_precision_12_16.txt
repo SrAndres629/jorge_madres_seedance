@@ -14,11 +14,7 @@ Style:
 Cinematic warm intimacy, respectful, human, emotionally grounded, no comedy in this shot.
 
 Native Audio:
-Music: slightly softer tropical groove with warm percussion
-Sound effects: subtle mirror ambience
-Voice type: calm off-camera male pregón voice
-Voice line: "Si la línea no sale igual, hay una forma más clara."
-Lip sync: none — off-camera voice only
+Generate native synchronized audio with slightly softer tropical groove with warm percussion from the first second. Add sound effects: subtle mirror ambience. Use an calm off-camera male pregón voice saying only: "Si la línea no sale igual, hay una forma más clara.". The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
 
 Constraints:
 - Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.

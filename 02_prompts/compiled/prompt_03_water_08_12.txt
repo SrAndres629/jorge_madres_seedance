@@ -14,11 +14,7 @@ Style:
 Cinematic tropical realism, wet reflections, visually striking but elegant, frustration without tragedy.
 
 Native Audio:
-Music: tropical cumbia-salsa rhythm with güiro, campana, congas, short brass accent
-Sound effects: splash, water drop, humid atmosphere
-Voice type: off-camera male pregón voice
-Voice line: "Agua, sudor y calor… que tu línea no se pase."
-Lip sync: none — off-camera voice only
+Generate native synchronized audio with tropical cumbia-salsa rhythm with güiro, campana, congas, short brass accent from the first second. Add sound effects: splash, water drop, humid atmosphere. Use an off-camera male pregón voice saying only: "Agua, sudor y calor… que tu línea no se pase.". The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
 
 Constraints:
 - Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.
