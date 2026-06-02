@@ -5,9 +5,11 @@ generate_seedance_final.py
 Safe Kie.ai / Seedance 2.0 generation script.
 Defaults to dry-run mode. Requires --execute + confirmation phrase for real calls.
 
-IMPORTANT:
-- Run without --execute first to generate preflight report.
-- Only proceed to --execute after preflight passes ALL checks.
+CRITICAL:
+- recordInfo uses query param: ?taskId=TASK_ID (NOT path-based)
+- States: waiting → queuing → generating → success | fail
+- Result URLs may come from resultJson (JSON string) or output.video_url
+- Credits may come as creditsConsumed or creditsUsed
 """
 
 import json
@@ -39,12 +41,11 @@ STATUS_DIR.mkdir(parents=True, exist_ok=True)
 RAW_OUTPUT.mkdir(parents=True, exist_ok=True)
 VALIDATION_DIR.mkdir(parents=True, exist_ok=True)
 
-# ─── CLI args ────────────────────────────────────────────────────────────────
 DRY_RUN = "--execute" not in sys.argv
 CONFIRMATION_PHRASE = "GENERAR_7_CLIPS_JORGE"
 
 
-# ─── Load config ─────────────────────────────────────────────────────────────
+# ─── Utility functions ───────────────────────────────────────────────────────
 def load_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -72,7 +73,207 @@ def check_url(url, timeout=10):
         return {"url": url, "statusCode": 0, "ok": False, "error": str(e)}
 
 
-# ─── STEP 1: Load and validate all reports ────────────────────────────────────
+def build_record_info_url(base_url, task_id):
+    """KIE API uses query param: GET /api/v1/jobs/recordInfo?taskId=..."""
+    return base_url.rstrip("/") + "?taskId=" + urllib.parse.quote(task_id)
+
+
+def extract_state(job_data):
+    """Read Kie job state from possible field names. Returns (state_str, is_active, is_success, is_fail)."""
+    state = (
+        job_data.get("state")
+        or job_data.get("status")
+        or job_data.get("data", {}).get("state")
+        or job_data.get("data", {}).get("status")
+        or "unknown"
+    )
+    active_states = {
+        "waiting",
+        "queuing",
+        "generating",
+        "processing",
+        "pending",
+        "running",
+    }
+    success_states = {"success", "succeeded", "completed", "done"}
+    fail_states = {"fail", "failed", "error", "cancelled", "canceled", "timeout"}
+
+    return (
+        state,
+        state in active_states,
+        state in success_states,
+        state in fail_states,
+    )
+
+
+def extract_video_url(job_data):
+    """Robust extraction of video URL from Kie response. Tries multiple paths."""
+    # 1. output.video_url
+    output = job_data.get("output", {})
+    if isinstance(output, dict) and output.get("video_url"):
+        return output["video_url"]
+
+    # 2. Direct video_url
+    if job_data.get("video_url"):
+        return job_data["video_url"]
+
+    # 3. resultUrl
+    if job_data.get("resultUrl"):
+        return job_data["resultUrl"]
+
+    # 4. resultUrls[0]
+    result_urls = job_data.get("resultUrls", [])
+    if isinstance(result_urls, list) and len(result_urls) > 0:
+        return result_urls[0]
+
+    # 5. resultJson (may be a JSON string)
+    result_json = job_data.get("resultJson", "")
+    if isinstance(result_json, str) and result_json.strip():
+        try:
+            parsed = json.loads(result_json)
+            return extract_video_url_from_parsed(parsed)
+        except (json.JSONDecodeError, TypeError):
+            pass
+    elif isinstance(result_json, dict):
+        url = extract_video_url_from_parsed(result_json)
+        if url:
+            return url
+
+    # 6. Check nested data
+    data = job_data.get("data", {})
+    if isinstance(data, dict):
+        return extract_video_url(data)
+
+    return ""
+
+
+def extract_video_url_from_parsed(parsed):
+    """Search a parsed resultJson dict for video URLs."""
+    if isinstance(parsed, dict):
+        for key in ("resultUrls", "video_urls", "urls", "output_urls"):
+            urls = parsed.get(key, [])
+            if isinstance(urls, list) and len(urls) > 0:
+                return urls[0]
+        if parsed.get("video_url"):
+            return parsed["video_url"]
+        if parsed.get("url"):
+            return parsed["url"]
+        for k, v in parsed.items():
+            if isinstance(v, str) and v.startswith("http") and ".mp4" in v:
+                return v
+        for k, v in parsed.items():
+            if isinstance(v, str) and v.startswith("http"):
+                return v
+    return ""
+
+
+def extract_credits(parsed):
+    """Extract credits from possible field names. Returns number or 0."""
+    for key in ("creditsConsumed", "creditsUsed", "credits_consumed", "credits_used"):
+        val = parsed.get(key)
+        if isinstance(val, (int, float)):
+            return val
+    data = parsed.get("data", {})
+    if isinstance(data, dict):
+        return extract_credits(data)
+    return 0
+
+
+# ─── PARSER VALIDATION (mock data, no Kie calls) ─────────────────────────────
+MOCK_SUCCESS = {
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "taskId": "task_test_001",
+        "state": "success",
+        "resultJson": '{"resultUrls":["https://cdn.kie.ai/output/test_video.mp4"]}',
+        "creditsConsumed": 50,
+    },
+}
+
+MOCK_FAIL = {
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "taskId": "task_test_002",
+        "state": "fail",
+        "resultJson": "",
+        "creditsConsumed": 25,
+    },
+}
+
+MOCK_ACTIVE = {
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "taskId": "task_test_003",
+        "state": "generating",
+        "resultJson": "",
+    },
+}
+
+
+def run_parser_validation():
+    """Test all parser functions against mock data. Returns (all_ok, detail)."""
+    results = []
+
+    # Test success state
+    _, _, is_success, _ = extract_state(MOCK_SUCCESS["data"])
+    results.append(("successStateRecognized", is_success))
+
+    # Test fail state
+    _, _, _, is_fail = extract_state(MOCK_FAIL["data"])
+    results.append(("failStateRecognized", is_fail))
+
+    # Test active state
+    _, is_active, _, _ = extract_state(MOCK_ACTIVE["data"])
+    results.append(("activeStateRecognized", is_active))
+
+    # Test video URL extraction from resultJson
+    video_url = extract_video_url(MOCK_SUCCESS["data"])
+    expected_url = "https://cdn.kie.ai/output/test_video.mp4"
+    results.append(("resultJsonParsed", video_url == expected_url))
+    results.append(("videoUrlExtracted", bool(video_url)))
+
+    # Test credits extraction
+    credits = extract_credits(MOCK_SUCCESS["data"])
+    results.append(("creditsConsumedExtracted", credits == 50))
+
+    # Test recordInfo URL construction
+    test_url = build_record_info_url(
+        "https://api.kie.ai/api/v1/jobs/recordInfo", "abc123"
+    )
+    results.append(("recordInfoUsesQueryParam", test_url.endswith("?taskId=abc123")))
+
+    all_ok = all(v for _, v in results)
+
+    detail = dict(results)
+    return all_ok, detail
+
+
+parser_all_ok, parser_detail = run_parser_validation()
+
+parser_report = {
+    "timestamp": datetime.now(timezone.utc).isoformat(),
+    "noKieCalled": True,
+    "overallOk": parser_all_ok,
+    **parser_detail,
+}
+
+parser_report_path = VALIDATION_DIR / "kie_api_parser_validation_report.json"
+with open(parser_report_path, "w", encoding="utf-8") as f:
+    json.dump(parser_report, f, indent=2, ensure_ascii=False)
+
+if not parser_all_ok:
+    print("FATAL: Parser validation FAILED.")
+    print(json.dumps(parser_report, indent=2))
+    sys.exit(1)
+
+print("Parser validation PASSED (mock data, no Kie calls)")
+for k, v in parser_detail.items():
+    print(f"  {k}: {'OK' if v else 'FAIL'}")
+
+# ─── STEP 1: Load and validate all reports ───────────────────────────────────
 preflight_errors = []
 
 try:
@@ -84,35 +285,28 @@ except Exception as e:
 try:
     preflight = load_json(PREFLIGHT_PATH)
 except Exception as e:
-    print(
-        f"FATAL: Cannot load preflight_report.json: {e}. Run prepare_seedance_payloads.py first."
-    )
+    print(f"FATAL: Cannot load preflight_report.json: {e}")
     sys.exit(1)
 
 try:
     alignment = load_json(ALIGNMENT_PATH)
 except Exception as e:
-    print(
-        f"FATAL: Cannot load alignment report: {e}. Run validate_prompt_reference_alignment.py first."
-    )
+    print(f"FATAL: Cannot load alignment report: {e}")
     sys.exit(1)
 
 try:
     audit = load_json(AUDIT_PATH)
 except Exception as e:
-    print(
-        f"FATAL: Cannot load audit report: {e}. Run final_prompt_content_audit.py first."
-    )
+    print(f"FATAL: Cannot load audit report: {e}")
     sys.exit(1)
 
 if not preflight.get("overallOk"):
     preflight_errors.append("preflight_report.json overallOk is false")
 if not alignment.get("overallOk"):
-    preflight_errors.append("prompt_reference_alignment_report.json overallOk is false")
+    preflight_errors.append("alignment_report.json overallOk is false")
 if not audit.get("summary", {}).get("overallOk"):
     preflight_errors.append("final_prompt_content_audit.json overallOk is false")
 
-# Load payloads
 payload_files = sorted(PAYLOADS_DIR.glob("payload_*.json"))
 if len(payload_files) != 7:
     preflight_errors.append(f"Expected 7 payloads, found {len(payload_files)}")
@@ -123,11 +317,9 @@ for pf in payload_files:
     inp = p.get("input", {})
     payloads.append({"file": pf, "data": p})
 
-# Validate payloads deeply
 for entry in payloads:
     pf = entry["file"]
     inp = entry["data"]["input"]
-
     sid = pf.stem.replace("payload_", "")
     prompt = inp.get("prompt", "")
 
@@ -142,15 +334,12 @@ for entry in payloads:
 
     expected_dur = 5 if sid.startswith(("06", "07")) else 4
     if inp.get("duration") != expected_dur:
-        preflight_errors.append(
-            f"{pf.name}: duration must be {expected_dur}, got {inp.get('duration')}"
-        )
+        preflight_errors.append(f"{pf.name}: duration must be {expected_dur}")
 
-    for forbidden in ["reference_audio_urls", "first_frame_url", "last_frame_url"]:
+    for forbidden in ("reference_audio_urls", "first_frame_url", "last_frame_url"):
         if forbidden in inp:
             preflight_errors.append(f"{pf.name}: {forbidden} must not be present")
 
-# HTTP 200 check
 url_failures = []
 for entry in payloads:
     for url in entry["data"]["input"].get("reference_image_urls", []):
@@ -159,79 +348,64 @@ for entry in payloads:
             url_failures.append(result)
             preflight_errors.append(f"URL not 200: {url}")
 
-# ─── STEP 2: Write generation preflight report ────────────────────────────────
 gen_preflight = {
     "timestamp": datetime.now(timezone.utc).isoformat(),
     "dryRun": DRY_RUN,
     "reportsValid": len(preflight_errors) == 0,
+    "parserValid": parser_all_ok,
     "validationErrors": preflight_errors,
     "payloadsFound": len(payloads),
-    "urlChecks": {
-        "total": len(url_failures)
-        + sum(
-            1
-            for e in payloads
-            for _ in e["data"]["input"].get("reference_image_urls", [])
-        ),
-        "failed": len(url_failures),
-        "failures": url_failures[:5],
-    },
-    "ready": len(preflight_errors) == 0,
+    "ready": len(preflight_errors) == 0 and parser_all_ok,
 }
 
 gen_preflight_path = VALIDATION_DIR / "final_generation_preflight_report.json"
 with open(gen_preflight_path, "w", encoding="utf-8") as f:
     json.dump(gen_preflight, f, indent=2, ensure_ascii=False)
 
-print("=" * 60)
+print(f"\n{'=' * 60}")
 print("GENERATION PREFLIGHT")
 print("=" * 60)
 print(f"Mode: {'DRY-RUN' if DRY_RUN else 'EXECUTE (real)'}")
 print(f"Reports valid: {gen_preflight['reportsValid']}")
+print(f"Parser valid: {gen_preflight['parserValid']}")
 print(f"Payloads: {gen_preflight['payloadsFound']}")
-print(f"Validation errors: {len(preflight_errors)}")
-print(f"URLs failed: {gen_preflight['urlChecks']['failed']}")
-print(f"Ready for generation: {gen_preflight['ready']}")
+print(f"Errors: {len(preflight_errors)}")
+print(f"Ready: {gen_preflight['ready']}")
 
-if preflight_errors:
-    for e in preflight_errors:
-        print(f"  ERROR: {e}")
-    print("\nPreflight FAILED. Fix errors before retrying.")
+for e in preflight_errors:
+    print(f"  ERROR: {e}")
+
+if not gen_preflight["ready"]:
+    print("\nPreflight FAILED.")
     sys.exit(1)
 
-print(f"\nReport: {gen_preflight_path}")
+print(f"\nReports: {gen_preflight_path}, {parser_report_path}")
 
-# ─── STEP 3: Dry-run exit ────────────────────────────────────────────────────
 if DRY_RUN:
     print("\nDRY-RUN mode. No Kie API calls made.")
-    print("To execute real generation, run with --execute flag.")
     sys.exit(0)
 
-# ─── STEP 4: Execute real generation ─────────────────────────────────────────
+# ─── EXECUTE REAL ────────────────────────────────────────────────────────────
 print("\n" + "=" * 60)
 print("REAL EXECUTION MODE")
 print("=" * 60)
-print(f"This will create {len(payloads)} tasks on Kie.ai / Seedance 2.0")
+print(f"Tasks to create: {len(payloads)}")
 print("Credits WILL be consumed.")
-print(f"\nType the exact confirmation phrase to proceed:")
-confirmation = input("> ").strip()
-
+confirmation = input("\nType exact phrase: ").strip()
 if confirmation != CONFIRMATION_PHRASE:
-    print(f"\nConfirmation mismatch. Expected: {CONFIRMATION_PHRASE}")
-    print("Aborting. No Kie API calls made.")
+    print(f"Aborting. Expected: {CONFIRMATION_PHRASE}")
     sys.exit(1)
 
-# Load .env
 try:
     import dotenv
 
     dotenv.load_dotenv(BASE / ".env")
 except ImportError:
-    print("FATAL: python-dotenv not installed. Run: pip install python-dotenv")
+    print("FATAL: pip install python-dotenv")
     sys.exit(1)
 
 API_KEY = os.environ.get("KIE_API_KEY", "")
-CREATE_TASK_URL = os.environ.get(
+CREATE_URL = os.environ.get(
     "KIE_CREATE_TASK_URL", "https://api.kie.ai/api/v1/jobs/createTask"
 )
 RECORD_INFO_URL = os.environ.get(
@@ -239,30 +413,27 @@ RECORD_INFO_URL = os.environ.get(
 )
 
 if not API_KEY:
-    print("FATAL: KIE_API_KEY not set in .env")
+    print("FATAL: KIE_API_KEY not set")
     sys.exit(1)
 
 POLL_INTERVAL = config.get("pollIntervalSeconds", 30)
 MAX_POLL_ROUNDS = config.get("maxPollRounds", 40)
-BASE_URL = config.get("publicAssetBaseUrl", "")
 
-print(f"\nAPI Key: {'*' * len(API_KEY[:8]) if len(API_KEY) > 8 else '**NOT SET**'}")
-print(f"Create URL: {CREATE_TASK_URL}")
-print(f"Poll interval: {POLL_INTERVAL}s, Max rounds: {MAX_POLL_ROUNDS}")
-print(f"\nProceeding with {len(payloads)} tasks...\n")
+print(f"API Key: {'*' * min(len(API_KEY), 8)}***")
+print(f"Poll: {POLL_INTERVAL}s, max {MAX_POLL_ROUNDS} rounds\n")
 
 
-def http_post(url_str, payload_dict, headers=None):
+def http_post(url_str, body, headers=None):
     if headers is None:
         headers = {}
     parsed = urllib.parse.urlparse(url_str)
     conn = http.client.HTTPSConnection(parsed.hostname, parsed.port or 443, timeout=60)
-    body = json.dumps(payload_dict).encode("utf-8")
-    headers["Content-Type"] = headers.get("Content-Type", "application/json")
+    raw = json.dumps(body).encode("utf-8")
+    headers["Content-Type"] = "application/json"
     conn.request(
         "POST",
         parsed.path + ("?" + parsed.query if parsed.query else ""),
-        body=body,
+        body=raw,
         headers=headers,
     )
     res = conn.getresponse()
@@ -279,11 +450,8 @@ def http_get(url_str, headers=None):
         headers = {}
     parsed = urllib.parse.urlparse(url_str)
     conn = http.client.HTTPSConnection(parsed.hostname, parsed.port or 443, timeout=60)
-    conn.request(
-        "GET",
-        parsed.path + ("?" + parsed.query if parsed.query else ""),
-        headers=headers,
-    )
+    path_q = parsed.path + ("?" + parsed.query if parsed.query else "")
+    conn.request("GET", path_q, headers=headers)
     res = conn.getresponse()
     data = res.read().decode("utf-8")
     conn.close()
@@ -296,92 +464,81 @@ def http_get(url_str, headers=None):
 def download_file(url_str, dest_path):
     parsed = urllib.parse.urlparse(url_str)
     conn = http.client.HTTPSConnection(parsed.hostname, parsed.port or 443, timeout=300)
-    conn.request("GET", parsed.path + ("?" + parsed.query if parsed.query else ""))
+    path_q = parsed.path + ("?" + parsed.query if parsed.query else "")
+    conn.request("GET", path_q)
     res = conn.getresponse()
-    if res.status == 200:
+    if res.status in (200, 302, 301):
+        data = res.read()
         with open(dest_path, "wb") as f:
-            f.write(res.read())
+            f.write(data)
     conn.close()
     return res.status
 
 
-# ─── STEP 5: Create tasks ─────────────────────────────────────────────────────
+# ─── STEP 5: Create tasks ────────────────────────────────────────────────────
 tasks = {}
-generation_report_scenes = []
+report_scenes = []
+headers_auth = {"Authorization": f"Bearer {API_KEY}"}
 
 for entry in payloads:
     pf = entry["file"]
-    payload_data = entry["data"]
     sid = pf.stem.replace("payload_", "")
+    body = entry["data"].copy()
 
-    headers = {"Authorization": f"Bearer {API_KEY}"}
+    # Save request
+    req_path = REQUESTS_DIR / f"{sid}_request.json"
+    with open(req_path, "w", encoding="utf-8") as f:
+        json.dump(body, f, indent=2, ensure_ascii=False)
 
-    # Prepare create request
-    create_body = payload_data.copy()
-
-    request_path = REQUESTS_DIR / f"{sid}_request.json"
-    with open(request_path, "w", encoding="utf-8") as f:
-        json.dump(create_body, f, indent=2, ensure_ascii=False)
-
-    print(f"[{sid}] Creating task...")
-    print(f"       Model: {create_body.get('model')}")
-    print(f"       Duration: {create_body['input'].get('duration')}s")
-    print(f"       Refs: {len(create_body['input'].get('reference_image_urls', []))}")
-
-    status_code, response_data = http_post(CREATE_TASK_URL, create_body, headers)
-
-    response_path = RESPONSES_DIR / f"{sid}_create_response.json"
-    with open(response_path, "w", encoding="utf-8") as f:
-        json.dump(
-            {"statusCode": status_code, "body": response_data},
-            f,
-            indent=2,
-            ensure_ascii=False,
-        )
-
-    task_id = (
-        response_data.get("data", {}).get("taskId") or response_data.get("taskId") or ""
+    print(
+        f"[{sid}] Creating task... dur={body['input'].get('duration')}s refs={len(body['input'].get('reference_image_urls', []))}"
     )
+    sc, resp = http_post(CREATE_URL, body, headers_auth)
+
+    # Save response
+    resp_path = RESPONSES_DIR / f"{sid}_create_response.json"
+    with open(resp_path, "w", encoding="utf-8") as f:
+        json.dump({"statusCode": sc, "body": resp}, f, indent=2, ensure_ascii=False)
+
+    task_id = resp.get("data", {}).get("taskId") or resp.get("taskId", "")
     created_at = datetime.now(timezone.utc).isoformat()
 
-    if status_code in (200, 201) and task_id:
+    if sc in (200, 201) and task_id:
         print(f"       OK | taskId={task_id}")
         tasks[sid] = {"taskId": task_id, "status": "created"}
-        generation_report_scenes.append(
+        report_scenes.append(
             {
                 "sceneId": sid,
                 "taskId": task_id,
-                "createStatus": status_code,
+                "createStatus": sc,
                 "finalStatus": "created",
                 "videoUrl": None,
                 "videoPath": None,
-                "creditsUsed": response_data.get("data", {}).get("creditsUsed")
-                or response_data.get("creditsUsed"),
+                "creditsUsed": extract_credits(resp),
                 "errorMessage": None,
                 "createdAt": created_at,
                 "completedAt": None,
             }
         )
     else:
-        err = response_data.get("message", str(response_data))
-        print(f"       FAILED | status={status_code} | {err}")
+        err = resp.get("message") or resp.get("msg") or str(resp)[:200]
+        print(f"       FAILED | {sc} | {err}")
         tasks[sid] = {"taskId": None, "status": "create_failed"}
-        generation_report_scenes.append(
+        report_scenes.append(
             {
                 "sceneId": sid,
                 "taskId": None,
-                "createStatus": status_code,
+                "createStatus": sc,
                 "finalStatus": "create_failed",
                 "videoUrl": None,
                 "videoPath": None,
-                "creditsUsed": None,
+                "creditsUsed": 0,
                 "errorMessage": err,
                 "createdAt": created_at,
                 "completedAt": None,
             }
         )
 
-# Save task IDs
 with open(TASKS_FILE, "w", encoding="utf-8") as f:
     json.dump(
         {"tasks": tasks, "timestamp": datetime.now(timezone.utc).isoformat()},
@@ -390,83 +547,78 @@ with open(TASKS_FILE, "w", encoding="utf-8") as f:
         ensure_ascii=False,
     )
 
-print(f"\nCreated: {sum(1 for t in tasks.values() if t['taskId'])}/{len(tasks)}")
-print(
-    f"Failed: {sum(1 for t in tasks.values() if t['status'] == 'create_failed')}/{len(tasks)}"
-)
+created_n = sum(1 for t in tasks.values() if t["taskId"])
+print(f"\nCreated: {created_n}/{len(tasks)}")
 
-# ─── STEP 6: Poll for completion ──────────────────────────────────────────────
+# ─── STEP 6: Poll ─────────────────────────────────────────────────────────────
 pending = {sid: t for sid, t in tasks.items() if t.get("taskId")}
 
-for round_num in range(1, MAX_POLL_ROUNDS + 1):
+for rnd in range(1, MAX_POLL_ROUNDS + 1):
     if not pending:
         break
-
-    print(f"\n--- Poll round {round_num}/{MAX_POLL_ROUNDS} ---")
+    print(f"\n--- Poll round {rnd}/{MAX_POLL_ROUNDS} ---")
     completed = []
 
     for sid, t in pending.items():
         task_id = t["taskId"]
-        record_url = RECORD_INFO_URL.rstrip("/")
-        full_url = (
-            f"{record_url}/{task_id}"
-            if not record_url.endswith("/recordInfo")
-            else f"{record_url}/{task_id}"
-        )
+        url = build_record_info_url(RECORD_INFO_URL, task_id)
+        sc, resp = http_get(url, headers_auth)
 
-        status_code, resp = http_get(full_url, {"Authorization": f"Bearer {API_KEY}"})
-
-        poll_path = STATUS_DIR / f"{sid}_poll_{round_num:02d}.json"
+        poll_path = STATUS_DIR / f"{sid}_poll_{rnd:02d}.json"
         with open(poll_path, "w", encoding="utf-8") as f:
             json.dump(
-                {"round": round_num, "statusCode": status_code, "body": resp},
+                {"round": rnd, "url": url, "statusCode": sc, "body": resp},
                 f,
                 indent=2,
                 ensure_ascii=False,
             )
 
         job_data = resp.get("data", resp)
-        job_status = job_data.get("status", "unknown")
-        finished_at = datetime.now(timezone.utc).isoformat()
+        state, is_active, is_success, is_fail = extract_state(job_data)
+        now = datetime.now(timezone.utc).isoformat()
+        print(f"  [{sid}] {task_id} → {state}")
 
-        print(f"  [{sid}] {task_id} → {job_status}")
+        # Update report
+        for e in report_scenes:
+            if e["sceneId"] == sid:
+                e["finalStatus"] = state
+                cr = extract_credits(resp)
+                if cr:
+                    e["creditsUsed"] = cr
 
-        # Update report entry
-        for entry in generation_report_scenes:
-            if entry["sceneId"] == sid:
-                entry["finalStatus"] = job_status
-                if "creditsUsed" in job_data:
-                    entry["creditsUsed"] = job_data["creditsUsed"]
-
-        if job_status in ("succeeded", "completed", "done"):
-            video_url = (
-                job_data.get("output", {}).get("video_url")
-                or job_data.get("video_url")
-                or ""
-            )
-            entry["videoUrl"] = video_url
-
+        if is_success:
+            video_url = extract_video_url(job_data)
+            for e in report_scenes:
+                if e["sceneId"] == sid:
+                    e["videoUrl"] = video_url
+                    e["completedAt"] = now
             if video_url:
                 dest = RAW_OUTPUT / f"{sid}__{task_id}.mp4"
-                print(f"  [{sid}] Downloading video → {dest}")
-                dl_status = download_file(video_url, dest)
-                if dl_status == 200:
-                    print(f"  [{sid}] Download OK ({dest.stat().st_size} bytes)")
-                    entry["videoPath"] = str(dest.relative_to(BASE))
+                print(f"  [{sid}] Downloading → {dest.name}")
+                dl_sc = download_file(video_url, dest)
+                if dl_sc in (200, 302, 301) and dest.stat().st_size > 0:
+                    print(f"       OK | {dest.stat().st_size} bytes")
+                    for e in report_scenes:
+                        if e["sceneId"] == sid:
+                            e["videoPath"] = str(dest.relative_to(BASE))
                 else:
-                    print(f"  [{sid}] Download FAILED (HTTP {dl_status})")
+                    print(
+                        f"       Download FAILED (HTTP {dl_sc}, size={dest.stat().st_size})"
+                    )
             else:
-                print(f"  [{sid}] No video_url in response")
-
-            entry["completedAt"] = finished_at
+                print(f"  [{sid}] WARN: success but no video_url found in response")
             completed.append(sid)
 
-        elif job_status in ("failed", "error", "cancelled"):
-            err_msg = job_data.get("error", job_data.get("message", "Unknown error"))
-            entry["errorMessage"] = err_msg
-            entry["completedAt"] = finished_at
-            completed.append(sid)
+        elif is_fail:
+            err_msg = (
+                job_data.get("error") or job_data.get("message") or str(resp)[:300]
+            )
             print(f"  [{sid}] FAILED: {err_msg}")
+            for e in report_scenes:
+                if e["sceneId"] == sid:
+                    e["errorMessage"] = err_msg
+                    e["completedAt"] = now
+            completed.append(sid)
 
     for sid in completed:
         del pending[sid]
@@ -475,55 +627,48 @@ for round_num in range(1, MAX_POLL_ROUNDS + 1):
         time.sleep(POLL_INTERVAL)
 
 if pending:
-    print(
-        f"\nTimeout: {len(pending)} tasks still pending after {MAX_POLL_ROUNDS} rounds"
-    )
+    print(f"\nTimeout: {len(pending)} pending after {MAX_POLL_ROUNDS} rounds")
     for sid in pending:
-        for entry in generation_report_scenes:
-            if entry["sceneId"] == sid:
-                entry["finalStatus"] = "timeout"
-                entry["completedAt"] = datetime.now(timezone.utc).isoformat()
+        for e in report_scenes:
+            if e["sceneId"] == sid:
+                e["finalStatus"] = "timeout"
+                e["completedAt"] = datetime.now(timezone.utc).isoformat()
 
-# ─── STEP 7: Final report ─────────────────────────────────────────────────────
+# ─── STEP 7: Final report ────────────────────────────────────────────────────
 final_report = {
     "timestamp": datetime.now(timezone.utc).isoformat(),
-    "totalScenes": len(generation_report_scenes),
+    "totalScenes": len(report_scenes),
     "completed": sum(
         1
-        for e in generation_report_scenes
-        if e["finalStatus"] in ("succeeded", "completed", "done")
+        for e in report_scenes
+        if e["finalStatus"] in ("success", "succeeded", "completed", "done")
     ),
     "failed": sum(
         1
-        for e in generation_report_scenes
+        for e in report_scenes
         if e["finalStatus"]
-        in ("failed", "error", "cancelled", "create_failed", "timeout")
+        in ("fail", "failed", "error", "cancelled", "create_failed", "timeout")
     ),
-    "scenes": generation_report_scenes,
+    "scenes": report_scenes,
     "kieCalled": True,
-    "creditsConsumed": sum(
-        (e["creditsUsed"] or 0)
-        for e in generation_report_scenes
-        if isinstance(e.get("creditsUsed"), (int, float))
-    ),
 }
 
-final_report_path = VALIDATION_DIR / "final_generation_report.json"
-with open(final_report_path, "w", encoding="utf-8") as f:
+final_path = VALIDATION_DIR / "final_generation_report.json"
+with open(final_path, "w", encoding="utf-8") as f:
     json.dump(final_report, f, indent=2, ensure_ascii=False)
 
 print("\n" + "=" * 60)
-print("GENERATION REPORT")
+print("FINAL GENERATION REPORT")
 print("=" * 60)
-print(f"Total: {final_report['totalScenes']}")
-print(f"Completed: {final_report['completed']}")
-print(f"Failed: {final_report['failed']}")
-print(f"Credits consumed: {final_report['creditsConsumed']}")
-
-for e in generation_report_scenes:
-    mark = "OK" if e["finalStatus"] in ("succeeded", "completed", "done") else "FAIL"
+print(f"Completed: {final_report['completed']} | Failed: {final_report['failed']}")
+for e in report_scenes:
+    mk = (
+        "OK"
+        if e["finalStatus"] in ("success", "succeeded", "completed", "done")
+        else "FAIL"
+    )
     print(
-        f"  [{mark}] {e['sceneId']} | {e['taskId']} | {e['finalStatus']} | video={e['videoPath'] or 'N/A'}"
+        f"  [{mk}] {e['sceneId']} | {e['taskId']} | {e['finalStatus']} | video={e['videoPath'] or 'N/A'}"
     )
 
-print(f"\nReport: {final_report_path}")
+print(f"\nReport: {final_path}")

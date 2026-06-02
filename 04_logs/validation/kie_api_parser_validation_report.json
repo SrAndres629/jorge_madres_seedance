@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-06-02T15:42:22.703329+00:00",
+  "noKieCalled": true,
+  "overallOk": true,
+  "successStateRecognized": true,
+  "failStateRecognized": true,
+  "activeStateRecognized": true,
+  "resultJsonParsed": true,
+  "videoUrlExtracted": true,
+  "creditsConsumedExtracted": true,
+  "recordInfoUsesQueryParam": true
+}

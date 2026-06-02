@@ -1,13 +1,9 @@
 {
-  "timestamp": "2026-06-02T15:38:27.864095+00:00",
+  "timestamp": "2026-06-02T15:42:27.324146+00:00",
   "dryRun": true,
   "reportsValid": true,
+  "parserValid": true,
   "validationErrors": [],
   "payloadsFound": 7,
-  "urlChecks": {
-    "total": 22,
-    "failed": 0,
-    "failures": []
-  },
   "ready": true
 }
