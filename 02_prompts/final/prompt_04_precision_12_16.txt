@@ -1,23 +1,20 @@
 Subject:
-A mature woman age 45–55 at a warm vanity mirror, with Jorge Aguirre Flores softly present in the mirror reflection or background.
+A mature woman age 45–55 sits at a warm vanity mirror. Jorge Aguirre Flores appears softly in the mirror reflection or background as a calm, respectful presence. Use the provided reference boards to preserve Jorge's identity, black uniform, mature face, and professional authority.
 
 Action:
-The woman applies eyeliner and the line comes out slightly uneven. She remains elegant, human, and dignified, showing quiet frustration without weakness.
+The woman applies eyeliner and the line comes out slightly uneven. She pauses, looks at the reflection, and shows quiet frustration without weakness. The moment should feel human and recognizable: the line does not come out like before. Jorge does not invade the scene; his presence is subtle, reassuring, and professional.
 
 Environment:
-Warm intimate vanity mirror, soft bulbs, subtle doubled reflection, calm interior, respectful emotional space.
+Warm intimate vanity mirror, soft bulbs, calm interior, subtle doubled reflection, gentle shadows, mature elegance, respectful emotional space. The scene is quieter than the previous clips and should create empathy rather than comedy.
 
 Camera:
-Shot in vertical 9:16 format. Gentle push-in toward the mirror and hand detail, slower and more intimate than previous clips. Use soft portrait lens with shallow depth. The visual rhythm should feel controlled, empathetic, slower rhythm. Focus order: first on hand with eyeliner, then slightly uneven line, then woman's reflection, then Jorge calm presence.
+Vertical 9:16. Use a gentle slow push-in toward the mirror and the hand detail. Keep the camera at face height with soft portrait framing and shallow depth. Focus order: hand with eyeliner, slightly uneven line, woman's reflection, subtle Jorge presence in mirror or background. The movement must be controlled, intimate, and empathetic.
 
 Style:
-Cinematic warm intimacy, respectful, human, emotionally grounded, no comedy in this shot.
+Cinematic warm intimacy, respectful, human, emotionally grounded, elegant but not glamorous, calm after the earlier chaos. This clip must protect the dignity of the woman and deepen identification with the target audience.
 
 Native Audio:
-Generate native synchronized audio with slightly softer tropical groove with warm percussion from the first second. Add sound effects: subtle mirror ambience. Use an calm off-camera male pregón voice saying only: "Si la línea no sale igual, hay una forma más clara.". The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
+Generate native synchronized audio with a slightly softer tropical groove, warm percussion, subtle mirror ambience, and a calm off-camera male pregón voice saying only: "Si la línea no sale igual, hay una forma más clara." The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
 
 Constraints:
-- Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.
-- No exaggerated old age, no trembling hands, no incapacity, no cruel tone.
-- No grotesque mirror distortion.
-- Avoid distorted hands, artificial skin, cartoon look, and sadness that feels humiliating.
+Do not generate on-screen text, captions, prices, phone numbers, WhatsApp graphics, logos, fake typography, fake brand names, or uniform embroidery. No exaggerated old age, no trembling hands, no incapacity, no cruel tone, no sadness that feels humiliating, no grotesque mirror distortion. Avoid distorted hands, extra fingers, artificial skin, cartoon look, or overdramatic wrinkles.

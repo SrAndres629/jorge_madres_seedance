@@ -1,23 +1,20 @@
 Subject:
-Jorge Aguirre Flores standing centered as the authority figure in a black professional uniform.
+Jorge Aguirre Flores stands centered as the authority figure in a black professional uniform. Use the provided identity, performance, and world integration reference boards to preserve his mature face, short dark hair, body type, calm masculine authority, and professional presence.
 
 Action:
-Jorge stands calm and authoritative. Behind him, the three problem worlds freeze as symbolic layers: time and clock, water and heat, vanity mirror and precision.
+Jorge stands still and composed while the three problem worlds freeze behind him as symbolic layers: time and clock, water and heat, vanity mirror and precision. He does not perform magic. He does not pose like a superhero. The world becomes calm because he is experienced, not because he has powers.
 
 Environment:
-Clean cinematic studio-like space with frozen symbolic worlds behind Jorge, controlled contrast, dark warm lighting, clear face.
+Clean cinematic studio-like space with frozen symbolic worlds behind Jorge. Controlled contrast, dark warm lighting, clear face, strong silhouette, subtle depth layers. The background should suggest the previous problems without becoming cluttered.
 
 Camera:
-Shot in vertical 9:16 format. Steady frontal slow push-in. Use eye-level or very subtle low-angle authority framing. The visual rhythm should feel calm, stable, powerful. Focus order: first on Jorge's face, then black uniform, then frozen worlds behind him.
+Vertical 9:16. Use a steady frontal slow push-in with eye-level or very subtle low-angle authority framing. Keep the camera calm and stable. Focus order: Jorge's face, black professional uniform, hands kept natural and low, frozen problem worlds behind him. The shot must feel like the official authority reveal of the campaign.
 
 Style:
-Cinematic authority reveal, masculine calm presence, professional trust, chaos stopped by experience, not magic.
+Cinematic authority reveal, masculine calm presence, professional trust, 30-year experience implied through visual weight, chaos stopped by expertise, not fantasy. Strong but not arrogant. Commercial but not old-fashioned.
 
 Native Audio:
-Generate native synchronized audio with authority beat drop with controlled tropical percussion and strong brass hit from the first second. Add sound effects: subtle freeze impact. Use an firm mature off-camera male voice saying only: "Más de treinta años cuidando tu mirada.". The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
+Generate native synchronized audio with an authority beat drop, controlled tropical percussion, strong brass hit, subtle freeze impact, and a firm mature off-camera male voice saying only: "Más de treinta años cuidando tu mirada." The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
 
 Constraints:
-- Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, fake typography, or fake uniform embroidery.
-- Do not change Jorge's face, age, hairstyle, body type, or uniform.
-- No magic hand gesture, no superhero pose, no raised hands using powers.
-- Avoid distorted hands, extra fingers, cluttered background, cartoon look, and theatrical acting.
+Do not generate on-screen text, captions, prices, phone numbers, WhatsApp graphics, logos, fake typography, fake brand names, or fake uniform embroidery. Do not change Jorge's face, age, hairstyle, body type, or uniform. No magic hand gestures, no superhero pose, no raised hands using powers, no theatrical acting, no exaggerated smile. Avoid distorted hands, extra fingers, cluttered background, cartoon look, fake doctor stereotype, influencer energy, or salesman energy.

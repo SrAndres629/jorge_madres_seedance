@@ -1,23 +1,20 @@
 Subject:
-A woman age 35–45 rushing at a vanity while Jorge Aguirre Flores calmly crosses through the center of the scene in a black professional uniform.
+A woman age 35–45 rushes at a vanity while Jorge Aguirre Flores calmly crosses through the center of the scene in a black professional uniform. Use the provided identity and performance reference boards to preserve Jorge's mature face, black uniform, masculine calm authority, and stable body language.
 
 Action:
-The woman tries to finish her eyeliner while checking the time. She is hurried and frustrated but dignified. Jorge walks with calm purpose while the world moves quickly around him.
+The woman tries to finish her eyeliner while checking the time. She is hurried and frustrated but dignified. The environment moves fast around her: clock, phone, purse, and makeup objects suggest pressure. Jorge walks with calm purpose through the center, not rescuing, not judging, simply becoming the stable axis inside the chaos.
 
 Environment:
-Chaotic morning vanity room with a large dominant clock, phone, makeup items, purse, and controlled visual disorder.
+Chaotic morning vanity room, large dominant clock, phone, purse, makeup items, warm interior light, controlled disorder. The chaos belongs to the objects, time, and camera movement, not to humiliating the woman.
 
 Camera:
-Shot in vertical 9:16 format. Dynamic lateral movement with a whip-pan feeling as Jorge crosses the frame. Use moderate wide lens with slight parallax. The visual rhythm should feel fast foreground motion while Jorge remains visually stable. Focus order: first on large clock, then rushing woman, then Jorge calm in center.
+Vertical 9:16. Use dynamic lateral movement with a whip-pan feeling as Jorge crosses the frame. Add fast foreground motion blur and parallax while Jorge remains visually stable and readable. Focus order: large clock, rushing woman, moving vanity objects, Jorge calm in center. The camera should create the sensation that time is running while Jorge remains controlled.
 
 Style:
-Fast-paced cinematic social-ad energy, humorous but respectful, chaos around the character, not humiliation.
+Fast-paced cinematic social-ad energy, modern TikTok/Reels rhythm, humorous but respectful, slightly surreal, clear silhouettes, warm dark commercial lighting, high readability. The scene must feel native to social media, not like an old advertisement.
 
 Native Audio:
-Generate native synchronized audio with fast tropical cumbia-salsa percussion with güiro, timbales and campana from the first second. Add sound effects: clock ticking, quick whoosh transitions. Use an off-camera male pregón voice saying only: "¡Ya no corras, no te atrases!". The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
+Generate native synchronized audio with fast tropical cumbia-salsa percussion, güiro, timbales, campana, quick clock ticks, and whip-pan whoosh transitions. Use an off-camera male pregón voice saying only: "¡Ya no corras, no te atrases!" The voice is narration, not lip-sync. Jorge does not sing or speak on camera.
 
 Constraints:
-- Do not generate on-screen text, prices, phone numbers, WhatsApp, logos, or fake typography.
-- No woman on the floor, no humiliation, no slapstick, no panic caricature.
-- Jorge must not act magical, heroic, theatrical, or exaggerated.
-- Avoid distorted hands, extra fingers, cartoon look, and cluttered unreadable layouts.
+Do not generate on-screen text, captions, prices, phone numbers, WhatsApp graphics, logos, fake typography, fake brand names, or uniform embroidery. Do not show the woman collapsed, humiliated, panicked, or ridiculous. No slapstick comedy. Jorge must not act magical, heroic, theatrical, or exaggerated. Avoid distorted hands, extra fingers, cartoon look, cluttered unreadable layouts, or excessive object chaos.
