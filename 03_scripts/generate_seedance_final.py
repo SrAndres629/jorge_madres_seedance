@@ -169,15 +169,17 @@ def extract_video_url_from_parsed(parsed):
     return ""
 
 
-def extract_credits(parsed):
+def extract_credits(parsed, depth=0):
     """Extract credits from possible field names. Returns number or 0."""
+    if depth > 5 or not isinstance(parsed, dict):
+        return 0
     for key in ("creditsConsumed", "creditsUsed", "credits_consumed", "credits_used"):
         val = parsed.get(key)
         if isinstance(val, (int, float)):
             return val
-    data = parsed.get("data", {})
+    data = parsed.get("data")
     if isinstance(data, dict):
-        return extract_credits(data)
+        return extract_credits(data, depth + 1)
     return 0
 
 
@@ -594,6 +596,37 @@ headers_auth = {"Authorization": f"Bearer {API_KEY}"}
 for entry in payloads:
     pf = entry["file"]
     sid = pf.stem.replace("payload_", "")
+
+    # Skip scenes already created successfully
+    resp_file = RESPONSES_DIR / f"{sid}_create_response.json"
+    if resp_file.exists():
+        try:
+            prev = load_json(resp_file)
+            prev_body = (prev or {}).get("body", {}) or {}
+            prev_task_id = (prev_body.get("data", {}) or {}).get(
+                "taskId"
+            ) or prev_body.get("taskId", "")
+            if prev.get("statusCode") in (200, 201) and prev_task_id:
+                print(f"[{sid}] SKIP — already created (taskId={prev_task_id})")
+                tasks[sid] = {"taskId": prev_task_id, "status": "created"}
+                report_scenes.append(
+                    {
+                        "sceneId": sid,
+                        "taskId": prev_task_id,
+                        "createStatus": prev.get("statusCode"),
+                        "finalStatus": "created",
+                        "videoUrl": None,
+                        "videoPath": None,
+                        "creditsUsed": extract_credits(prev_body),
+                        "errorMessage": None,
+                        "createdAt": prev.get("createdAt", ""),
+                        "completedAt": None,
+                    }
+                )
+                continue
+        except Exception:
+            pass
+
     body = entry["data"].copy()
 
     # Save request

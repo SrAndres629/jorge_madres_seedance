@@ -1,0 +1,22 @@
+{
+  "round": 1,
+  "url": "https://api.kie.ai/api/v1/jobs/recordInfo?taskId=a3adb7c9b78b397e3bdd41a00bd0ee40",
+  "statusCode": 200,
+  "body": {
+    "code": 200,
+    "msg": "success",
+    "data": {
+      "taskId": "a3adb7c9b78b397e3bdd41a00bd0ee40",
+      "model": "bytedance/seedance-2-fast",
+      "state": "waiting",
+      "param": "{\"input\":\"{\\\"duration\\\":4,\\\"aspect_ratio\\\":\\\"9:16\\\",\\\"web_search\\\":false,\\\"generate_audio\\\":true,\\\"prompt\\\":\\\"Subject:\\\\nThe women from the previous problem scenes now appear calmer, more confident, and ready for their day. Jorge Aguirre Flores appears as the stable professional connector of the transformation, preserving his mature identity, black uniform, masculine calm authority, and trusted specialist presence from the reference boards.\\\\n\\\\nAction:\\\\nThe chaos begins to resolve into practical everyday beauty. Show three quick benefit impressions, not a fake before-and-after: eyes looking naturally defined, lips with soft natural color, brows and mirada clean and balanced. The women feel relieved and prepared, as if life became easier, not as if they became artificial models.\\\\n\\\\nEnvironment:\\\\nBrighter, cleaner, more positive beauty environment. The previous chaotic worlds become organized: mirror calmer, water clearer, clock no longer aggressive. Warm light opens the frame. The atmosphere shifts from pressure to confidence.\\\\n\\\\nCamera:\\\\nVertical 9:16. Use smooth push-ins and clean visual transitions from chaos to clarity. Let the camera move through three fast but readable beauty impressions: eyes, lips, brows/mirada, then return to Jorge as the professional connector. Focus order: natural eye definition, lips with soft color, balanced brows, Jorge stable presence. The movement should feel energetic but more controlled than the first half.\\\\n\\\\nStyle:\\\\nCinematic transformation, natural confidence, practical beauty, positive commercial polish, not luxury spa, not fake glamour. The emotional reading is relief, readiness, and everyday confidence.\\\\n\\\\nNative Audio:\\\\nGenerate native synchronized audio with tropical cumbia-salsa music rising positively, güiro, timbales, brass accent, bright transition hit, and a short chorus feeling. Use an off-camera male or mixed pregón voice saying only: \\\\\\\"Diseño definitivo: ojos, labios y mirada.\\\\\\\" The voice is narration, not lip-sync. Jorge does not sing or speak on camera.\\\\n\\\\nConstraints:\\\\nDo not generate on-screen text, captions, prices, phone numbers, WhatsApp graphics, logos, fake typography, fake brand names, or uniform embroidery. No fake before-and-after layout, no exaggerated beauty transformation, no model-perfect artificial skin, no plastic face, no excessive glamour, no unrealistic beauty claims. Avoid distorted hands, extra fingers, cartoon look, cluttered composition, or too many women in one unreadable frame.\\\",\\\"resolution\\\":\\\"720p\\\",\\\"reference_image_urls\\\":[\\\"https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png\\\",\\\"https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png\\\",\\\"https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_06_solucion_transformacion.png\\\"]}\",\"model\":\"bytedance/seedance-2-fast\"}",
+      "resultJson": "",
+      "failCode": null,
+      "failMsg": null,
+      "costTime": null,
+      "completeTime": null,
+      "createTime": 1780417118048,
+      "creditsConsumed": 132.0
+    }
+  }
+}

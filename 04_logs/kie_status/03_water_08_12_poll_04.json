@@ -1,0 +1,22 @@
+{
+  "round": 4,
+  "url": "https://api.kie.ai/api/v1/jobs/recordInfo?taskId=45297ceb3315081f4056b44faeeb44e9",
+  "statusCode": 200,
+  "body": {
+    "code": 200,
+    "msg": "success",
+    "data": {
+      "taskId": "45297ceb3315081f4056b44faeeb44e9",
+      "model": "bytedance/seedance-2-fast",
+      "state": "waiting",
+      "param": "{\"input\":\"{\\\"duration\\\":4,\\\"aspect_ratio\\\":\\\"9:16\\\",\\\"web_search\\\":false,\\\"generate_audio\\\":true,\\\"prompt\\\":\\\"Subject:\\\\nA woman age 35–45 is in a tropical humid environment where water, sweat, and heat threaten her makeup. Jorge Aguirre Flores appears calm and steady in the background or crossing through the environment, using the reference boards to preserve his identity and professional presence.\\\\n\\\\nAction:\\\\nThe woman notices that her eyeliner line is beginning to soften and disappear. The effect is symbolic and elegant: a single line dissolves through a water drop, reflection, or wet surface. She feels frustrated, but not devastated. Jorge remains composed, visually suggesting that there is a professional solution beyond the daily problem.\\\\n\\\\nEnvironment:\\\\nTropical humidity, warm rain, poolside reflection, steam, water drops, wet mirror surface, humid light, reflective surfaces. The scene should feel wet, energetic, and visually striking, but not ugly or tragic.\\\\n\\\\nCamera:\\\\nVertical 9:16. Start with an extreme close-up of a water drop or wet reflective surface, then transition into a medium shot of the woman noticing the dissolving line. Use a short orbit or smooth push-in toward the eyeliner detail. Focus order: water drop, dissolving eyeliner line, woman's frustrated reaction, Jorge steady presence. The water itself should motivate the transition and camera movement.\\\\n\\\\nStyle:\\\\nCinematic tropical realism, wet reflections, commercial polish, visually bold but elegant, frustration without tragedy, social-media energy, natural beauty tone. The image should sell the problem without making the face look destroyed.\\\\n\\\\nNative Audio:\\\\nGenerate native synchronized audio with tropical cumbia-salsa rhythm, güiro, campana, congas, short brass accent, splash sound, water drop detail, and humid atmosphere. Use an off-camera male pregón voice saying only: \\\\\\\"Agua, sudor y calor… que tu línea no se pase.\\\\\\\" The voice is narration, not lip-sync. Jorge does not sing or speak on camera.\\\\n\\\\nConstraints:\\\\nDo not generate on-screen text, captions, prices, phone numbers, WhatsApp graphics, logos, fake typography, fake brand names, or uniform embroidery. No destroyed makeup face, no horror look, no ugly crying, no excessive suffering, no grotesque makeup. No oversexualized pool imagery. Avoid distorted hands, extra fingers, melting faces, plastic skin, cartoon look, or confusing water effects.\\\",\\\"resolution\\\":\\\"720p\\\",\\\"reference_image_urls\\\":[\\\"https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png\\\",\\\"https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png\\\",\\\"https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_03_agua_sudor_calor.png\\\"]}\",\"model\":\"bytedance/seedance-2-fast\"}",
+      "resultJson": "",
+      "failCode": null,
+      "failMsg": null,
+      "costTime": null,
+      "completeTime": null,
+      "createTime": 1780417116424,
+      "creditsConsumed": 132.0
+    }
+  }
+}

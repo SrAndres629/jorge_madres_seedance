@@ -1,0 +1,22 @@
+{
+  "round": 3,
+  "url": "https://api.kie.ai/api/v1/jobs/recordInfo?taskId=12eeff1b38809336328fa25f382ec380",
+  "statusCode": 200,
+  "body": {
+    "code": 200,
+    "msg": "success",
+    "data": {
+      "taskId": "12eeff1b38809336328fa25f382ec380",
+      "model": "bytedance/seedance-2-fast",
+      "state": "waiting",
+      "param": "{\"input\":\"{\\\"duration\\\":4,\\\"aspect_ratio\\\":\\\"9:16\\\",\\\"web_search\\\":false,\\\"generate_audio\\\":true,\\\"prompt\\\":\\\"Subject:\\\\nA mature woman age 45–55 sits at a warm vanity mirror. Jorge Aguirre Flores appears softly in the mirror reflection or background as a calm, respectful presence. Use the provided reference boards to preserve Jorge's identity, black uniform, mature face, and professional authority.\\\\n\\\\nAction:\\\\nThe woman applies eyeliner and the line comes out slightly uneven. She pauses, looks at the reflection, and shows quiet frustration without weakness. The moment should feel human and recognizable: the line does not come out like before. Jorge does not invade the scene; his presence is subtle, reassuring, and professional.\\\\n\\\\nEnvironment:\\\\nWarm intimate vanity mirror, soft bulbs, calm interior, subtle doubled reflection, gentle shadows, mature elegance, respectful emotional space. The scene is quieter than the previous clips and should create empathy rather than comedy.\\\\n\\\\nCamera:\\\\nVertical 9:16. Use a gentle slow push-in toward the mirror and the hand detail. Keep the camera at face height with soft portrait framing and shallow depth. Focus order: hand with eyeliner, slightly uneven line, woman's reflection, subtle Jorge presence in mirror or background. The movement must be controlled, intimate, and empathetic.\\\\n\\\\nStyle:\\\\nCinematic warm intimacy, respectful, human, emotionally grounded, elegant but not glamorous, calm after the earlier chaos. This clip must protect the dignity of the woman and deepen identification with the target audience.\\\\n\\\\nNative Audio:\\\\nGenerate native synchronized audio with a slightly softer tropical groove, warm percussion, subtle mirror ambience, and a calm off-camera male pregón voice saying only: \\\\\\\"Si la línea no sale igual, hay una forma más clara.\\\\\\\" The voice is narration, not lip-sync. Jorge does not sing or speak on camera.\\\\n\\\\nConstraints:\\\\nDo not generate on-screen text, captions, prices, phone numbers, WhatsApp graphics, logos, fake typography, fake brand names, or uniform embroidery. No exaggerated old age, no trembling hands, no incapacity, no cruel tone, no sadness that feels humiliating, no grotesque mirror distortion. Avoid distorted hands, extra fingers, artificial skin, cartoon look, or overdramatic wrinkles.\\\",\\\"resolution\\\":\\\"720p\\\",\\\"reference_image_urls\\\":[\\\"https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png\\\",\\\"https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png\\\",\\\"https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_04_dolor_precision.png\\\"]}\",\"model\":\"bytedance/seedance-2-fast\"}",
+      "resultJson": "",
+      "failCode": null,
+      "failMsg": null,
+      "costTime": null,
+      "completeTime": null,
+      "createTime": 1780417117229,
+      "creditsConsumed": 132.0
+    }
+  }
+}

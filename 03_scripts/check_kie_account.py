@@ -87,12 +87,13 @@ http_status, body = http_get(CREDIT_URL, {"Authorization": f"Bearer {API_KEY}"})
 api_code = body.get("code", http_status)
 api_msg = body.get("msg", "")
 
-# Detect daily limit in current response
-if not daily_limit_known and (
+# The credit endpoint is authoritative for current state.
+# Only mark daily limit blocked if the CREDIT endpoint says so.
+daily_limit_current = (
     "daily limit" in api_msg.lower() or "exceeded the daily limit" in api_msg.lower()
-):
-    daily_limit_known = True
-    daily_limit_msg = api_msg
+)
+daily_limit_known = daily_limit_current
+daily_limit_msg = api_msg if daily_limit_current else daily_limit_msg
 
 api_key_valid = http_status == 200 and api_code == 200
 

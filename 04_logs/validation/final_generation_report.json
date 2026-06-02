@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-06-02T16:23:45.843270+00:00",
+  "totalScenes": 7,
+  "completed": 5,
+  "failed": 2,
+  "scenes": [
+    {
+      "sceneId": "01_hook_00_04",
+      "taskId": "bf079109cefc557c40007d53232f523b",
+      "createStatus": 200,
+      "finalStatus": "success",
+      "videoUrl": "https://tempfile.aiquickdraw.com/h/bf079109cefc557c40007d53232f523b_1780417388.mp4",
+      "videoPath": "05_outputs/raw/01_hook_00_04__bf079109cefc557c40007d53232f523b.mp4",
+      "creditsUsed": 132.0,
+      "errorMessage": null,
+      "createdAt": "",
+      "completedAt": "2026-06-02T16:23:44.489084+00:00"
+    },
+    {
+      "sceneId": "02_time_04_08",
+      "taskId": "9d127ad0586b6844794d5f0916c524d2",
+      "createStatus": 200,
+      "finalStatus": "success",
+      "videoUrl": "https://tempfile.aiquickdraw.com/seedance/1780417297843-z5p1u6c7d.mp4",
+      "videoPath": "05_outputs/raw/02_time_04_08__9d127ad0586b6844794d5f0916c524d2.mp4",
+      "creditsUsed": 132.0,
+      "errorMessage": null,
+      "createdAt": "2026-06-02T16:18:35.840727+00:00",
+      "completedAt": "2026-06-02T16:22:02.665040+00:00"
+    },
+    {
+      "sceneId": "03_water_08_12",
+      "taskId": "45297ceb3315081f4056b44faeeb44e9",
+      "createStatus": 200,
+      "finalStatus": "success",
+      "videoUrl": "https://tempfile.aiquickdraw.com/h/45297ceb3315081f4056b44faeeb44e9_1780417356.mp4",
+      "videoPath": "05_outputs/raw/03_water_08_12__45297ceb3315081f4056b44faeeb44e9.mp4",
+      "creditsUsed": 132.0,
+      "errorMessage": null,
+      "createdAt": "2026-06-02T16:18:36.670319+00:00",
+      "completedAt": "2026-06-02T16:23:08.956104+00:00"
+    },
+    {
+      "sceneId": "04_precision_12_16",
+      "taskId": "12eeff1b38809336328fa25f382ec380",
+      "createStatus": 200,
+      "finalStatus": "success",
+      "videoUrl": "https://tempfile.aiquickdraw.com/seedance/1780417264400-zl9q7ye0h8l.mp4",
+      "videoPath": "05_outputs/raw/04_precision_12_16__12eeff1b38809336328fa25f382ec380.mp4",
+      "creditsUsed": 132.0,
+      "errorMessage": null,
+      "createdAt": "2026-06-02T16:18:37.520925+00:00",
+      "completedAt": "2026-06-02T16:21:29.455788+00:00"
+    },
+    {
+      "sceneId": "05_solution_16_20",
+      "taskId": "a3adb7c9b78b397e3bdd41a00bd0ee40",
+      "createStatus": 200,
+      "finalStatus": "success",
+      "videoUrl": "https://tempfile.aiquickdraw.com/h/a3adb7c9b78b397e3bdd41a00bd0ee40_1780417385.mp4",
+      "videoPath": "05_outputs/raw/05_solution_16_20__a3adb7c9b78b397e3bdd41a00bd0ee40.mp4",
+      "creditsUsed": 132.0,
+      "errorMessage": null,
+      "createdAt": "2026-06-02T16:18:38.289021+00:00",
+      "completedAt": "2026-06-02T16:23:11.627034+00:00"
+    },
+    {
+      "sceneId": "06_authority_20_25",
+      "taskId": null,
+      "createStatus": 200,
+      "finalStatus": "create_failed",
+      "videoUrl": null,
+      "videoPath": null,
+      "creditsUsed": 0,
+      "errorMessage": "The current number of points used by apiKey has exceeded the daily limit",
+      "createdAt": "2026-06-02T16:18:38.988917+00:00",
+      "completedAt": null
+    },
+    {
+      "sceneId": "07_cta_25_30",
+      "taskId": null,
+      "createStatus": 200,
+      "finalStatus": "create_failed",
+      "videoUrl": null,
+      "videoPath": null,
+      "creditsUsed": 0,
+      "errorMessage": "The current number of points used by apiKey has exceeded the daily limit",
+      "createdAt": "2026-06-02T16:18:39.695001+00:00",
+      "completedAt": null
+    }
+  ],
+  "kieCalled": true
+}

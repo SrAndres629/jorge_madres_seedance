@@ -1,0 +1,8 @@
+{
+  "statusCode": 200,
+  "body": {
+    "code": 500,
+    "msg": "The current number of points used by apiKey has exceeded the daily limit",
+    "data": null
+  }
+}

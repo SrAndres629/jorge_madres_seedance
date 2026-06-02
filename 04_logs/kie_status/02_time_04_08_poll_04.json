@@ -1,0 +1,22 @@
+{
+  "round": 4,
+  "url": "https://api.kie.ai/api/v1/jobs/recordInfo?taskId=9d127ad0586b6844794d5f0916c524d2",
+  "statusCode": 200,
+  "body": {
+    "code": 200,
+    "msg": "success",
+    "data": {
+      "taskId": "9d127ad0586b6844794d5f0916c524d2",
+      "model": "bytedance/seedance-2-fast",
+      "state": "waiting",
+      "param": "{\"input\":\"{\\\"duration\\\":4,\\\"aspect_ratio\\\":\\\"9:16\\\",\\\"web_search\\\":false,\\\"generate_audio\\\":true,\\\"prompt\\\":\\\"Subject:\\\\nA woman age 35–45 rushes at a vanity while Jorge Aguirre Flores calmly crosses through the center of the scene in a black professional uniform. Use the provided identity and performance reference boards to preserve Jorge's mature face, black uniform, masculine calm authority, and stable body language.\\\\n\\\\nAction:\\\\nThe woman tries to finish her eyeliner while checking the time. She is hurried and frustrated but dignified. The environment moves fast around her: clock, phone, purse, and makeup objects suggest pressure. Jorge walks with calm purpose through the center, not rescuing, not judging, simply becoming the stable axis inside the chaos.\\\\n\\\\nEnvironment:\\\\nChaotic morning vanity room, large dominant clock, phone, purse, makeup items, warm interior light, controlled disorder. The chaos belongs to the objects, time, and camera movement, not to humiliating the woman.\\\\n\\\\nCamera:\\\\nVertical 9:16. Use dynamic lateral movement with a whip-pan feeling as Jorge crosses the frame. Add fast foreground motion blur and parallax while Jorge remains visually stable and readable. Focus order: large clock, rushing woman, moving vanity objects, Jorge calm in center. The camera should create the sensation that time is running while Jorge remains controlled.\\\\n\\\\nStyle:\\\\nFast-paced cinematic social-ad energy, modern TikTok/Reels rhythm, humorous but respectful, slightly surreal, clear silhouettes, warm dark commercial lighting, high readability. The scene must feel native to social media, not like an old advertisement.\\\\n\\\\nNative Audio:\\\\nGenerate native synchronized audio with fast tropical cumbia-salsa percussion, güiro, timbales, campana, quick clock ticks, and whip-pan whoosh transitions. Use an off-camera male pregón voice saying only: \\\\\\\"¡Ya no corras, no te atrases!\\\\\\\" The voice is narration, not lip-sync. Jorge does not sing or speak on camera.\\\\n\\\\nConstraints:\\\\nDo not generate on-screen text, captions, prices, phone numbers, WhatsApp graphics, logos, fake typography, fake brand names, or uniform embroidery. Do not show the woman collapsed, humiliated, panicked, or ridiculous. No slapstick comedy. Jorge must not act magical, heroic, theatrical, or exaggerated. Avoid distorted hands, extra fingers, cartoon look, cluttered unreadable layouts, or excessive object chaos.\\\",\\\"resolution\\\":\\\"720p\\\",\\\"reference_image_urls\\\":[\\\"https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_a_identity_lock.png\\\",\\\"https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/brand/board_b_performance_presence.png\\\",\\\"https://raw.githubusercontent.com/SrAndres629/jorge_madres_seedance/main/01_assets/scenes/scene_02_dolor_tiempo.png\\\"]}\",\"model\":\"bytedance/seedance-2-fast\"}",
+      "resultJson": "",
+      "failCode": null,
+      "failMsg": null,
+      "costTime": null,
+      "completeTime": null,
+      "createTime": 1780417115581,
+      "creditsConsumed": 132.0
+    }
+  }
+}
