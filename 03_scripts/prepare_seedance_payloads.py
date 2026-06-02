@@ -213,6 +213,7 @@ def main():
         # 9. Validate payload
         inp = payload["input"]
         pv = report["payloadValidation"]
+        pv["totalPayloads"] += 1
 
         if inp.get("generate_audio") is not True:
             pv["allGenerateAudioTrue"] = False

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-02T15:19:03.517635+00:00",
+  "timestamp": "2026-06-02T15:23:37.818224+00:00",
   "dryRun": true,
   "kieCalled": false,
   "configLoaded": true,
@@ -158,7 +158,7 @@
     "allOk": true
   },
   "payloadValidation": {
-    "totalPayloads": 0,
+    "totalPayloads": 7,
     "allGenerateAudioTrue": true,
     "correctAspectRatio": true,
     "correctResolution": true,
