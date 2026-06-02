@@ -1,0 +1,195 @@
+{
+  "timestamp": "2026-06-02T15:34:31.952694+00:00",
+  "totalScenes": 7,
+  "scenes": [
+    {
+      "sceneId": "01_hook_00_04",
+      "promptFile": "02_prompts/final/prompt_01_hook_00_04.txt",
+      "promptCharCount": 2521,
+      "first300Chars_promptFile": "Subject:\nA woman age 35–45 stands in front of a vanity mirror during a chaotic morning. She is the emotional entry point of the scene. Jorge Aguirre Flores appears only as a dark partial silhouette inside the mirror reflection, using the provided identity and performance reference boards only to pre",
+      "requiredMarkers_promptFile": {
+        "emotional entry point": true,
+        "mirror is the main visual portal": true,
+        "first frame must feel impossible to ignore": true
+      },
+      "promptFile_markersOk": true,
+      "payloadFile": "04_logs/dry_run_payloads/payload_01_hook_00_04.json",
+      "payloadPromptCharCount": 2521,
+      "first300Chars_payloadPrompt": "Subject:\nA woman age 35–45 stands in front of a vanity mirror during a chaotic morning. She is the emotional entry point of the scene. Jorge Aguirre Flores appears only as a dark partial silhouette inside the mirror reflection, using the provided identity and performance reference boards only to pre",
+      "requiredMarkers_payloadPrompt": {
+        "emotional entry point": true,
+        "mirror is the main visual portal": true,
+        "first frame must feel impossible to ignore": true
+      },
+      "payloadPrompt_markersOk": true,
+      "promptFileEqualsPayloadPrompt": true,
+      "grammarErrors_promptFile": [],
+      "grammarErrors_payloadPrompt": [],
+      "grammarOk": true,
+      "overallOk": true
+    },
+    {
+      "sceneId": "02_time_04_08",
+      "promptFile": "02_prompts/final/prompt_02_time_04_08.txt",
+      "promptCharCount": 2276,
+      "first300Chars_promptFile": "Subject:\nA woman age 35–45 rushes at a vanity while Jorge Aguirre Flores calmly crosses through the center of the scene in a black professional uniform. Use the provided identity and performance reference boards to preserve Jorge's mature face, black uniform, masculine calm authority, and stable bod",
+      "requiredMarkers_promptFile": {
+        "stable axis inside the chaos": true,
+        "The chaos belongs to the objects, time, and camera movement": true,
+        "native to social media": true
+      },
+      "promptFile_markersOk": true,
+      "payloadFile": "04_logs/dry_run_payloads/payload_02_time_04_08.json",
+      "payloadPromptCharCount": 2276,
+      "first300Chars_payloadPrompt": "Subject:\nA woman age 35–45 rushes at a vanity while Jorge Aguirre Flores calmly crosses through the center of the scene in a black professional uniform. Use the provided identity and performance reference boards to preserve Jorge's mature face, black uniform, masculine calm authority, and stable bod",
+      "requiredMarkers_payloadPrompt": {
+        "stable axis inside the chaos": true,
+        "The chaos belongs to the objects, time, and camera movement": true,
+        "native to social media": true
+      },
+      "payloadPrompt_markersOk": true,
+      "promptFileEqualsPayloadPrompt": true,
+      "grammarErrors_promptFile": [],
+      "grammarErrors_payloadPrompt": [],
+      "grammarOk": true,
+      "overallOk": true
+    },
+    {
+      "sceneId": "03_water_08_12",
+      "promptFile": "02_prompts/final/prompt_03_water_08_12.txt",
+      "promptCharCount": 2284,
+      "first300Chars_promptFile": "Subject:\nA woman age 35–45 is in a tropical humid environment where water, sweat, and heat threaten her makeup. Jorge Aguirre Flores appears calm and steady in the background or crossing through the environment, using the reference boards to preserve his identity and professional presence.\n\nAction:\n",
+      "requiredMarkers_promptFile": {
+        "symbolic and elegant": true,
+        "water itself should motivate the transition": true,
+        "sell the problem without making the face look destroyed": true
+      },
+      "promptFile_markersOk": true,
+      "payloadFile": "04_logs/dry_run_payloads/payload_03_water_08_12.json",
+      "payloadPromptCharCount": 2284,
+      "first300Chars_payloadPrompt": "Subject:\nA woman age 35–45 is in a tropical humid environment where water, sweat, and heat threaten her makeup. Jorge Aguirre Flores appears calm and steady in the background or crossing through the environment, using the reference boards to preserve his identity and professional presence.\n\nAction:\n",
+      "requiredMarkers_payloadPrompt": {
+        "symbolic and elegant": true,
+        "water itself should motivate the transition": true,
+        "sell the problem without making the face look destroyed": true
+      },
+      "payloadPrompt_markersOk": true,
+      "promptFileEqualsPayloadPrompt": true,
+      "grammarErrors_promptFile": [],
+      "grammarErrors_payloadPrompt": [],
+      "grammarOk": true,
+      "overallOk": true
+    },
+    {
+      "sceneId": "04_precision_12_16",
+      "promptFile": "02_prompts/final/prompt_04_precision_12_16.txt",
+      "promptCharCount": 2165,
+      "first300Chars_promptFile": "Subject:\nA mature woman age 45–55 sits at a warm vanity mirror. Jorge Aguirre Flores appears softly in the mirror reflection or background as a calm, respectful presence. Use the provided reference boards to preserve Jorge's identity, black uniform, mature face, and professional authority.\n\nAction:\n",
+      "requiredMarkers_promptFile": {
+        "quieter than the previous clips": true,
+        "protect the dignity of the woman": true,
+        "the line does not come out like before": true
+      },
+      "promptFile_markersOk": true,
+      "payloadFile": "04_logs/dry_run_payloads/payload_04_precision_12_16.json",
+      "payloadPromptCharCount": 2165,
+      "first300Chars_payloadPrompt": "Subject:\nA mature woman age 45–55 sits at a warm vanity mirror. Jorge Aguirre Flores appears softly in the mirror reflection or background as a calm, respectful presence. Use the provided reference boards to preserve Jorge's identity, black uniform, mature face, and professional authority.\n\nAction:\n",
+      "requiredMarkers_payloadPrompt": {
+        "quieter than the previous clips": true,
+        "protect the dignity of the woman": true,
+        "the line does not come out like before": true
+      },
+      "payloadPrompt_markersOk": true,
+      "promptFileEqualsPayloadPrompt": true,
+      "grammarErrors_promptFile": [],
+      "grammarErrors_payloadPrompt": [],
+      "grammarOk": true,
+      "overallOk": true
+    },
+    {
+      "sceneId": "05_solution_16_20",
+      "promptFile": "02_prompts/final/prompt_05_solution_16_20.txt",
+      "promptCharCount": 2364,
+      "first300Chars_promptFile": "Subject:\nThe women from the previous problem scenes now appear calmer, more confident, and ready for their day. Jorge Aguirre Flores appears as the stable professional connector of the transformation, preserving his mature identity, black uniform, masculine calm authority, and trusted specialist pre",
+      "requiredMarkers_promptFile": {
+        "relief, readiness, and everyday confidence": true,
+        "three quick benefit impressions": true,
+        "not a fake before-and-after": true
+      },
+      "promptFile_markersOk": true,
+      "payloadFile": "04_logs/dry_run_payloads/payload_05_solution_16_20.json",
+      "payloadPromptCharCount": 2364,
+      "first300Chars_payloadPrompt": "Subject:\nThe women from the previous problem scenes now appear calmer, more confident, and ready for their day. Jorge Aguirre Flores appears as the stable professional connector of the transformation, preserving his mature identity, black uniform, masculine calm authority, and trusted specialist pre",
+      "requiredMarkers_payloadPrompt": {
+        "relief, readiness, and everyday confidence": true,
+        "three quick benefit impressions": true,
+        "not a fake before-and-after": true
+      },
+      "payloadPrompt_markersOk": true,
+      "promptFileEqualsPayloadPrompt": true,
+      "grammarErrors_promptFile": [],
+      "grammarErrors_payloadPrompt": [],
+      "grammarOk": true,
+      "overallOk": true
+    },
+    {
+      "sceneId": "06_authority_20_25",
+      "promptFile": "02_prompts/final/prompt_06_authority_20_25.txt",
+      "promptCharCount": 2246,
+      "first300Chars_promptFile": "Subject:\nJorge Aguirre Flores stands centered as the authority figure in a black professional uniform. Use the provided identity, performance, and world integration reference boards to preserve his mature face, short dark hair, body type, calm masculine authority, and professional presence.\n\nAction:",
+      "requiredMarkers_promptFile": {
+        "official authority reveal": true,
+        "He does not perform magic": true,
+        "chaos stopped by expertise, not fantasy": true
+      },
+      "promptFile_markersOk": true,
+      "payloadFile": "04_logs/dry_run_payloads/payload_06_authority_20_25.json",
+      "payloadPromptCharCount": 2246,
+      "first300Chars_payloadPrompt": "Subject:\nJorge Aguirre Flores stands centered as the authority figure in a black professional uniform. Use the provided identity, performance, and world integration reference boards to preserve his mature face, short dark hair, body type, calm masculine authority, and professional presence.\n\nAction:",
+      "requiredMarkers_payloadPrompt": {
+        "official authority reveal": true,
+        "He does not perform magic": true,
+        "chaos stopped by expertise, not fantasy": true
+      },
+      "payloadPrompt_markersOk": true,
+      "promptFileEqualsPayloadPrompt": true,
+      "grammarErrors_promptFile": [],
+      "grammarErrors_payloadPrompt": [],
+      "grammarOk": true,
+      "overallOk": true
+    },
+    {
+      "sceneId": "07_cta_25_30",
+      "promptFile": "02_prompts/final/prompt_07_cta_25_30.txt",
+      "promptCharCount": 2285,
+      "first300Chars_promptFile": "Subject:\nJorge Aguirre Flores stands calmly and confidently in a clean dark professional beauty-studio environment. Use the provided identity and performance reference boards to preserve his mature face, short dark hair, black professional uniform, masculine calm authority, and trusted specialist pr",
+      "requiredMarkers_promptFile": {
+        "CapCut": true,
+        "final CTA card": true,
+        "writing on WhatsApp is the next easy step": true
+      },
+      "promptFile_markersOk": true,
+      "payloadFile": "04_logs/dry_run_payloads/payload_07_cta_25_30.json",
+      "payloadPromptCharCount": 2285,
+      "first300Chars_payloadPrompt": "Subject:\nJorge Aguirre Flores stands calmly and confidently in a clean dark professional beauty-studio environment. Use the provided identity and performance reference boards to preserve his mature face, short dark hair, black professional uniform, masculine calm authority, and trusted specialist pr",
+      "requiredMarkers_payloadPrompt": {
+        "CapCut": true,
+        "final CTA card": true,
+        "writing on WhatsApp is the next easy step": true
+      },
+      "payloadPrompt_markersOk": true,
+      "promptFileEqualsPayloadPrompt": true,
+      "grammarErrors_promptFile": [],
+      "grammarErrors_payloadPrompt": [],
+      "grammarOk": true,
+      "overallOk": true
+    }
+  ],
+  "summary": {
+    "finalPromptsOk": true,
+    "payloadPromptsOk": true,
+    "noGrammarIssues": true,
+    "allPromptsMatchPayloads": true,
+    "overallOk": true
+  }
+}
