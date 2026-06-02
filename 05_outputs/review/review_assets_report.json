@@ -1,0 +1,205 @@
+{
+  "timestamp": "2026-06-02T17:04:50.268216+00:00",
+  "noKieCalled": true,
+  "noCreditsSpent": true,
+  "totalVideos": 5,
+  "successfulScenes": 5,
+  "scenes": [
+    {
+      "sceneId": "01_hook_00_04",
+      "videoPath": "05_outputs/raw/01_hook_00_04__bf079109cefc557c40007d53232f523b.mp4",
+      "duration": 4.064,
+      "resolution": [
+        720,
+        1280
+      ],
+      "framesExtracted": 5,
+      "frames": {
+        "00_25": {
+          "path": "05_outputs/review/keyframes/01_hook_00_04_t00_25.jpg",
+          "sourceFrameIndex": 6,
+          "usedTimestamp": 0.25
+        },
+        "01_00": {
+          "path": "05_outputs/review/keyframes/01_hook_00_04_t01_00.jpg",
+          "sourceFrameIndex": 24,
+          "usedTimestamp": 1.0
+        },
+        "02_00": {
+          "path": "05_outputs/review/keyframes/01_hook_00_04_t02_00.jpg",
+          "sourceFrameIndex": 48,
+          "usedTimestamp": 2.0
+        },
+        "03_00": {
+          "path": "05_outputs/review/keyframes/01_hook_00_04_t03_00.jpg",
+          "sourceFrameIndex": 72,
+          "usedTimestamp": 3.0
+        },
+        "03_75": {
+          "path": "05_outputs/review/keyframes/01_hook_00_04_t03_75.jpg",
+          "sourceFrameIndex": 90,
+          "usedTimestamp": 3.75
+        }
+      },
+      "contactSheetPath": "05_outputs/review/contact_sheets/01_hook_00_04_contact_sheet.jpg",
+      "ok": true
+    },
+    {
+      "sceneId": "02_time_04_08",
+      "videoPath": "05_outputs/raw/02_time_04_08__9d127ad0586b6844794d5f0916c524d2.mp4",
+      "duration": 4.064,
+      "resolution": [
+        720,
+        1280
+      ],
+      "framesExtracted": 5,
+      "frames": {
+        "00_25": {
+          "path": "05_outputs/review/keyframes/02_time_04_08_t00_25.jpg",
+          "sourceFrameIndex": 6,
+          "usedTimestamp": 0.25
+        },
+        "01_00": {
+          "path": "05_outputs/review/keyframes/02_time_04_08_t01_00.jpg",
+          "sourceFrameIndex": 24,
+          "usedTimestamp": 1.0
+        },
+        "02_00": {
+          "path": "05_outputs/review/keyframes/02_time_04_08_t02_00.jpg",
+          "sourceFrameIndex": 48,
+          "usedTimestamp": 2.0
+        },
+        "03_00": {
+          "path": "05_outputs/review/keyframes/02_time_04_08_t03_00.jpg",
+          "sourceFrameIndex": 72,
+          "usedTimestamp": 3.0
+        },
+        "03_75": {
+          "path": "05_outputs/review/keyframes/02_time_04_08_t03_75.jpg",
+          "sourceFrameIndex": 90,
+          "usedTimestamp": 3.75
+        }
+      },
+      "contactSheetPath": "05_outputs/review/contact_sheets/02_time_04_08_contact_sheet.jpg",
+      "ok": true
+    },
+    {
+      "sceneId": "03_water_08_12",
+      "videoPath": "05_outputs/raw/03_water_08_12__45297ceb3315081f4056b44faeeb44e9.mp4",
+      "duration": 4.064,
+      "resolution": [
+        720,
+        1280
+      ],
+      "framesExtracted": 5,
+      "frames": {
+        "00_25": {
+          "path": "05_outputs/review/keyframes/03_water_08_12_t00_25.jpg",
+          "sourceFrameIndex": 6,
+          "usedTimestamp": 0.25
+        },
+        "01_00": {
+          "path": "05_outputs/review/keyframes/03_water_08_12_t01_00.jpg",
+          "sourceFrameIndex": 24,
+          "usedTimestamp": 1.0
+        },
+        "02_00": {
+          "path": "05_outputs/review/keyframes/03_water_08_12_t02_00.jpg",
+          "sourceFrameIndex": 48,
+          "usedTimestamp": 2.0
+        },
+        "03_00": {
+          "path": "05_outputs/review/keyframes/03_water_08_12_t03_00.jpg",
+          "sourceFrameIndex": 72,
+          "usedTimestamp": 3.0
+        },
+        "03_75": {
+          "path": "05_outputs/review/keyframes/03_water_08_12_t03_75.jpg",
+          "sourceFrameIndex": 90,
+          "usedTimestamp": 3.75
+        }
+      },
+      "contactSheetPath": "05_outputs/review/contact_sheets/03_water_08_12_contact_sheet.jpg",
+      "ok": true
+    },
+    {
+      "sceneId": "04_precision_12_16",
+      "videoPath": "05_outputs/raw/04_precision_12_16__12eeff1b38809336328fa25f382ec380.mp4",
+      "duration": 4.064,
+      "resolution": [
+        720,
+        1280
+      ],
+      "framesExtracted": 5,
+      "frames": {
+        "00_25": {
+          "path": "05_outputs/review/keyframes/04_precision_12_16_t00_25.jpg",
+          "sourceFrameIndex": 6,
+          "usedTimestamp": 0.25
+        },
+        "01_00": {
+          "path": "05_outputs/review/keyframes/04_precision_12_16_t01_00.jpg",
+          "sourceFrameIndex": 24,
+          "usedTimestamp": 1.0
+        },
+        "02_00": {
+          "path": "05_outputs/review/keyframes/04_precision_12_16_t02_00.jpg",
+          "sourceFrameIndex": 48,
+          "usedTimestamp": 2.0
+        },
+        "03_00": {
+          "path": "05_outputs/review/keyframes/04_precision_12_16_t03_00.jpg",
+          "sourceFrameIndex": 72,
+          "usedTimestamp": 3.0
+        },
+        "03_75": {
+          "path": "05_outputs/review/keyframes/04_precision_12_16_t03_75.jpg",
+          "sourceFrameIndex": 90,
+          "usedTimestamp": 3.75
+        }
+      },
+      "contactSheetPath": "05_outputs/review/contact_sheets/04_precision_12_16_contact_sheet.jpg",
+      "ok": true
+    },
+    {
+      "sceneId": "05_solution_16_20",
+      "videoPath": "05_outputs/raw/05_solution_16_20__a3adb7c9b78b397e3bdd41a00bd0ee40.mp4",
+      "duration": 4.064,
+      "resolution": [
+        720,
+        1280
+      ],
+      "framesExtracted": 5,
+      "frames": {
+        "00_25": {
+          "path": "05_outputs/review/keyframes/05_solution_16_20_t00_25.jpg",
+          "sourceFrameIndex": 6,
+          "usedTimestamp": 0.25
+        },
+        "01_00": {
+          "path": "05_outputs/review/keyframes/05_solution_16_20_t01_00.jpg",
+          "sourceFrameIndex": 24,
+          "usedTimestamp": 1.0
+        },
+        "02_00": {
+          "path": "05_outputs/review/keyframes/05_solution_16_20_t02_00.jpg",
+          "sourceFrameIndex": 48,
+          "usedTimestamp": 2.0
+        },
+        "03_00": {
+          "path": "05_outputs/review/keyframes/05_solution_16_20_t03_00.jpg",
+          "sourceFrameIndex": 72,
+          "usedTimestamp": 3.0
+        },
+        "03_75": {
+          "path": "05_outputs/review/keyframes/05_solution_16_20_t03_75.jpg",
+          "sourceFrameIndex": 90,
+          "usedTimestamp": 3.75
+        }
+      },
+      "contactSheetPath": "05_outputs/review/contact_sheets/05_solution_16_20_contact_sheet.jpg",
+      "ok": true
+    }
+  ],
+  "overallOk": true
+}
