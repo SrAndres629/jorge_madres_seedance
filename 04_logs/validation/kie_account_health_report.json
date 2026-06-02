@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-06-02T15:59:57.503573+00:00",
+  "creditUrl": "https://api.kie.ai/api/v1/chat/credit",
+  "httpStatus": 200,
+  "code": 200,
+  "msg": "success",
+  "apiKeyValid": true,
+  "creditBalance": 810,
+  "minRequiredCredits": 800,
+  "hasEnoughCredits": true,
+  "dailyLimitKnownBlocked": true,
+  "dailyLimitMessageFromPreviousRun": "The current number of points used by apiKey has exceeded the daily limit",
+  "safeToGenerate": false,
+  "noCreateTaskCalled": true,
+  "creditsSpent": 0
+}

@@ -34,6 +34,8 @@ STATUS_DIR = BASE / "04_logs/kie_status"
 RAW_OUTPUT = BASE / "05_outputs/raw"
 VALIDATION_DIR = BASE / "04_logs/validation"
 TASKS_FILE = BASE / "04_logs/kie_tasks.json"
+ACCOUNT_HEALTH_PATH = VALIDATION_DIR / "kie_account_health_report.json"
+ACCOUNT_CHECK = "--account-check" in sys.argv
 
 REQUESTS_DIR.mkdir(parents=True, exist_ok=True)
 RESPONSES_DIR.mkdir(parents=True, exist_ok=True)
@@ -273,6 +275,52 @@ print("Parser validation PASSED (mock data, no Kie calls)")
 for k, v in parser_detail.items():
     print(f"  {k}: {'OK' if v else 'FAIL'}")
 
+
+# ─── Account Health ──────────────────────────────────────────────────────────
+def load_account_health():
+    if not ACCOUNT_HEALTH_PATH.exists():
+        return None
+    try:
+        return load_json(ACCOUNT_HEALTH_PATH)
+    except Exception:
+        return None
+
+
+account_health_errors = []
+account_health = load_account_health()
+
+if ACCOUNT_CHECK:
+    if account_health is None:
+        print("\nAccount Health: NOT CHECKED. Run check_kie_account.py first.")
+        sys.exit(1)
+    ah = account_health
+    safe = ah.get("safeToGenerate", False)
+    print(f"\nAccount Health Check: {'PASSED' if safe else 'FAILED'}")
+    print(f"  API Key valid: {ah.get('apiKeyValid')}")
+    print(f"  Credit balance: {ah.get('creditBalance')}")
+    print(f"  Enough credits: {ah.get('hasEnoughCredits')}")
+    print(f"  Daily limit blocked: {ah.get('dailyLimitKnownBlocked')}")
+    print(f"  Safe to generate: {safe}")
+    sys.exit(0 if safe else 1)
+
+if DRY_RUN and account_health is not None and not ACCOUNT_CHECK:
+    ah = account_health
+    if not ah.get("apiKeyValid", False):
+        account_health_errors.append("API key invalid (401 or error response)")
+    if not ah.get("hasEnoughCredits", False):
+        account_health_errors.append(
+            f"Credits {ah.get('creditBalance')} < {ah.get('minRequiredCredits')}"
+        )
+    if ah.get("dailyLimitKnownBlocked", False):
+        account_health_errors.append(
+            "Daily limit blocked: "
+            + str(ah.get("dailyLimitMessageFromPreviousRun", ""))[:120]
+        )
+
+if DRY_RUN and account_health is None and not ACCOUNT_CHECK:
+    print("\nWARNING: Account health not checked. Run:")
+    print("  python 03_scripts/check_kie_account.py")
+
 # ─── STEP 1: Load and validate all reports ───────────────────────────────────
 preflight_errors = []
 
@@ -353,9 +401,35 @@ gen_preflight = {
     "dryRun": DRY_RUN,
     "reportsValid": len(preflight_errors) == 0,
     "parserValid": parser_all_ok,
+    "accountHealth": {
+        "checked": account_health is not None,
+        "apiKeyValid": account_health.get("apiKeyValid", False)
+        if account_health
+        else False,
+        "creditBalance": account_health.get("creditBalance", 0)
+        if account_health
+        else 0,
+        "hasEnoughCredits": account_health.get("hasEnoughCredits", False)
+        if account_health
+        else False,
+        "dailyLimitKnownBlocked": account_health.get("dailyLimitKnownBlocked", False)
+        if account_health
+        else False,
+        "safeToGenerate": account_health.get("safeToGenerate", False)
+        if account_health
+        else False,
+    },
     "validationErrors": preflight_errors,
     "payloadsFound": len(payloads),
-    "ready": len(preflight_errors) == 0 and parser_all_ok,
+    "ready": (
+        len(preflight_errors) == 0
+        and parser_all_ok
+        and account_health.get("safeToGenerate", False)
+        if account_health
+        else False
+    )
+    if not DRY_RUN
+    else (len(preflight_errors) == 0 and parser_all_ok),
 }
 
 gen_preflight_path = VALIDATION_DIR / "final_generation_preflight_report.json"
@@ -371,6 +445,11 @@ print(f"Parser valid: {gen_preflight['parserValid']}")
 print(f"Payloads: {gen_preflight['payloadsFound']}")
 print(f"Errors: {len(preflight_errors)}")
 print(f"Ready: {gen_preflight['ready']}")
+ah_info = gen_preflight.get("accountHealth", {})
+if ah_info.get("checked"):
+    print(
+        f"Account: key={'OK' if ah_info.get('apiKeyValid') else 'BAD'} | credits={ah_info.get('creditBalance')} | enough={ah_info.get('hasEnoughCredits')} | blocked={ah_info.get('dailyLimitKnownBlocked')} | safe={ah_info.get('safeToGenerate')}"
+    )
 
 for e in preflight_errors:
     print(f"  ERROR: {e}")
@@ -382,8 +461,40 @@ if not gen_preflight["ready"]:
 print(f"\nReports: {gen_preflight_path}, {parser_report_path}")
 
 if DRY_RUN:
+    if account_health_errors:
+        print("\nACCOUNT HEALTH WARNINGS:")
+        for e in account_health_errors:
+            print(f"  {e}")
     print("\nDRY-RUN mode. No Kie API calls made.")
     sys.exit(0)
+
+# ─── Account health gate before execute ──────────────────────────────────────
+if account_health is None:
+    print("\nFATAL: Account health not checked. Run first:")
+    print("  python 03_scripts/check_kie_account.py")
+    sys.exit(1)
+
+if not account_health.get("apiKeyValid", False):
+    print(
+        f"\nFATAL: API key invalid. HTTP {account_health.get('httpStatus')}, code {account_health.get('code')}"
+    )
+    sys.exit(1)
+
+if not account_health.get("hasEnoughCredits", False):
+    print(
+        f"\nFATAL: Insufficient credits ({account_health.get('creditBalance')} < {account_health.get('minRequiredCredits')})"
+    )
+    sys.exit(1)
+
+if account_health.get("dailyLimitKnownBlocked", False):
+    print(
+        f"\nFATAL: Daily limit blocked: {account_health.get('dailyLimitMessageFromPreviousRun', '')[:200]}"
+    )
+    sys.exit(1)
+
+if not account_health.get("safeToGenerate", False):
+    print("\nFATAL: Account health check says NOT safe to generate.")
+    sys.exit(1)
 
 # ─── EXECUTE REAL ────────────────────────────────────────────────────────────
 print("\n" + "=" * 60)

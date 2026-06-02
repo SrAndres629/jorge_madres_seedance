@@ -1,8 +1,16 @@
 {
-  "timestamp": "2026-06-02T15:52:40.114488+00:00",
-  "dryRun": false,
+  "timestamp": "2026-06-02T16:00:13.043986+00:00",
+  "dryRun": true,
   "reportsValid": true,
   "parserValid": true,
+  "accountHealth": {
+    "checked": true,
+    "apiKeyValid": true,
+    "creditBalance": 810,
+    "hasEnoughCredits": true,
+    "dailyLimitKnownBlocked": true,
+    "safeToGenerate": false
+  },
   "validationErrors": [],
   "payloadsFound": 7,
   "ready": true
